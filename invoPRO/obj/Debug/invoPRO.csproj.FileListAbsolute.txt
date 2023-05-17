@@ -1,0 +1,11 @@
+C:\Users\nuwand\Desktop\DonationWeb\invoPRO\bin\Debug\invoPRO.exe.config
+C:\Users\nuwand\Desktop\DonationWeb\invoPRO\bin\Debug\invoPRO.exe
+C:\Users\nuwand\Desktop\DonationWeb\invoPRO\bin\Debug\invoPRO.pdb
+C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.csproj.AssemblyReference.cache
+C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.csproj.SuggestedBindingRedirects.cache
+C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.Form1.resources
+C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.Properties.Resources.resources
+C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.csproj.GenerateResource.cache
+C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.csproj.CoreCompileInputs.cache
+C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.exe
+C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.pdb
