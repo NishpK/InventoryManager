@@ -26,5 +26,23 @@ namespace invoPRO
         {
 
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox1.Checked== true) {
+                passwordtb.UseSystemPasswordChar = false;
+
+            }
+            else
+            {
+                passwordtb.UseSystemPasswordChar=true;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            unametb.Text = "";
+            passwordtb.Text = "";
+        }
     }
 }

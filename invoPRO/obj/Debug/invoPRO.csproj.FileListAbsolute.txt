@@ -9,3 +9,5 @@ C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.csproj.GenerateRes
 C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.csproj.CoreCompileInputs.cache
 C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.exe
 C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.pdb
+C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.Admin_home.resources
+C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.user_manage.resources
