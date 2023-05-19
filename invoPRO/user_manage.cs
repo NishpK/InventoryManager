@@ -154,8 +154,10 @@ namespace invoPRO
             passwordtb.Text = usersgv.SelectedRows[0].Cells[3].Value.ToString();
         }
 
+        private void fnametb_TextChanged(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }
 
