@@ -67,9 +67,8 @@ namespace invoPRO
                 {
                     if (username == "admin" && password == "123")
                     {
-                        user_manage um = new user_manage();
-                        um.Show();
-                       
+                        Admin_home home = new Admin_home();
+                        home.Show();
                         this.Hide();
                         MessageBox.Show("welcome admin");
                     }
