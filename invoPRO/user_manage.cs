@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace invoPRO
 {
@@ -155,6 +156,20 @@ namespace invoPRO
         }
 
         private void fnametb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void passwordtb_TextChanged(object sender, EventArgs e)
+        {
+            // The password character is an asterisk.
+            passwordtb.PasswordChar = '*';
+
+            // The control will allow no more than 14 characters.
+            passwordtb.MaxLength = 14;
+        }
+
+        private void user_manage_Load(object sender, EventArgs e)
         {
 
         }

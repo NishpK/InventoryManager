@@ -11,3 +11,16 @@ C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.exe
 C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.pdb
 C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.Admin_home.resources
 C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.user_manage.resources
+C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\bin\Debug\invoPRO.exe
+C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\bin\Debug\invoPRO.exe.config
+C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.csproj.AssemblyReference.cache
+C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.csproj.SuggestedBindingRedirects.cache
+C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.Admin_home.resources
+C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.Form1.resources
+C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.Properties.Resources.resources
+C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.user_manage.resources
+C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.csproj.GenerateResource.cache
+C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.csproj.CoreCompileInputs.cache
+C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.exe
+C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.pdb
+C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\bin\Debug\invoPRO.pdb
