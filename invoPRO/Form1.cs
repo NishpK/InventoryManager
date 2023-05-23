@@ -44,8 +44,8 @@ namespace invoPRO
 
         private void button2_Click(object sender, EventArgs e)
         {
-            unametb.Text = "";
-            passwordtb.Text = "";
+            unametb.Text = string.Empty;
+            passwordtb.Text = string.Empty;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -56,49 +56,56 @@ namespace invoPRO
             username = unametb.Text;
             password= passwordtb.Text;
 
-            try
-            {
-                String Myquery = "SELECT * FROM UserTbl WHERE Uname= '" + unametb.Text + "' AND Upassword= '" + passwordtb.Text + "'";
-                SqlDataAdapter sda = new SqlDataAdapter(Myquery, Con);
-                DataTable dtable = new DataTable();
-                sda.Fill(dtable);
 
-                if (dtable.Rows.Count > 0)
+            if (username == "admin" && password == "123")
+            {
+                Admin_home home = new Admin_home();
+                home.Show();
+                this.Hide();
+                MessageBox.Show("welcome admin");
+            }
+
+            else
+            {
+                try
                 {
-                    if (username == "admin" && password == "123")
+                    String Myquery = "SELECT * FROM UserTbl WHERE Uname= '" + unametb.Text + "' AND Upassword= '" + passwordtb.Text + "'";
+                    SqlDataAdapter sda = new SqlDataAdapter(Myquery, Con);
+                    DataTable dtable = new DataTable();
+                    sda.Fill(dtable);
+
+               
+                    if (dtable.Rows.Count > 0)
                     {
-                        Admin_home home = new Admin_home();
-                        home.Show();
-                        this.Hide();
-                        MessageBox.Show("welcome admin");
-                    }
-                    else
-                    {
-                        username = unametb.Text;
-                        password = passwordtb.Text;
-                        //change this to customer page later
-                        Admin_home home = new Admin_home();
-                        home.Show();
-                        this.Hide();
+
+                            username = unametb.Text;
+                            password = passwordtb.Text;
+                            //change this to customer page later
+                            Admin_home home = new Admin_home();
+                            home.Show();
+                            this.Hide();
                         MessageBox.Show("welcome user");
                     }
-                }
 
-                else
+                    else
+                    {
+                        MessageBox.Show("invalid username or password");
+
+                    }
+
+                }
+                catch
                 {
-                    MessageBox.Show("invalid username or password");
+                    MessageBox.Show("Error");
+                }
 
+                finally
+                {
+                    Con.Close();
                 }
 
             }
-            catch
-            {
-                MessageBox.Show("Error");
-            }
-            finally
-            {
-                Con.Close();
-            }
+
         }
     }
 }
