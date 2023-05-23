@@ -55,5 +55,12 @@ namespace invoPRO
             c.Show();
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //supplieer manage button
+            Supplier s = new Supplier();
+            s.Show();
+        }
     }
 }

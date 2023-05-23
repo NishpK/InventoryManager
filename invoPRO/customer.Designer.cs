@@ -119,10 +119,10 @@
             this.panel1.Controls.Add(this.cfname);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(3, 188);
+            this.panel1.Location = new System.Drawing.Point(0, 173);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1889, 709);
+            this.panel1.Size = new System.Drawing.Size(1889, 644);
             this.panel1.TabIndex = 1;
             // 
             // button4
@@ -189,14 +189,14 @@
             this.usersgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.usersgv.EnableHeadersVisualStyles = false;
             this.usersgv.GridColor = System.Drawing.Color.Black;
-            this.usersgv.Location = new System.Drawing.Point(773, 33);
+            this.usersgv.Location = new System.Drawing.Point(783, 31);
             this.usersgv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.usersgv.Name = "usersgv";
             this.usersgv.RowHeadersVisible = false;
             this.usersgv.RowHeadersWidth = 51;
             this.usersgv.RowTemplate.Height = 24;
             this.usersgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.usersgv.Size = new System.Drawing.Size(1103, 614);
+            this.usersgv.Size = new System.Drawing.Size(1103, 564);
             this.usersgv.TabIndex = 12;
             this.usersgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.usersgv_CellContentClick);
             // 
@@ -258,10 +258,11 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(16, 15);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1876, 167);
+            this.panel2.Size = new System.Drawing.Size(1907, 167);
             this.panel2.TabIndex = 2;
             // 
             // customer
