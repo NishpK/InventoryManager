@@ -24,3 +24,4 @@ C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.cspro
 C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.exe
 C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.pdb
 C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\bin\Debug\invoPRO.pdb
+C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.customer.resources

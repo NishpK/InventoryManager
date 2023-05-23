@@ -173,6 +173,26 @@ namespace invoPRO
         {
 
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //clear button 
+            fnametb.Text = "";
+            lnametb.Text = "";
+            unametb.Text = "";
+            passwordtb.Text = "";
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

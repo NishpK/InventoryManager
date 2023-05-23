@@ -17,19 +17,43 @@ namespace invoPRO
             InitializeComponent();
         }
 
+        
         private void button1_Click(object sender, EventArgs e)
         {
-            // to generate from through panels
+          /*  // to generate from through panels
             user_manage m = new user_manage() { TopLevel = false, TopMost = true };
             m.FormBorderStyle = FormBorderStyle.None;
             panel2.Controls.Add(m);
+            m.Show();*/
+          user_manage m= new user_manage();
             m.Show();
+
+            
         }
 
 
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            // exit button
+            Application.Exit();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           /* //customer pg panel generate
+            customer c = new customer() { TopLevel = false, TopMost = true };
+            c.FormBorderStyle = FormBorderStyle.None;
+            panel2.Controls.Add(c);
+            c.Show();*/
+
+            customer c= new customer();
+            c.Show();
+
         }
     }
 }
