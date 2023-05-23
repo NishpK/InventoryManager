@@ -196,6 +196,16 @@ namespace invoPRO
 
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {// clear button
+            sid.Text = string.Empty;
+            sname.Text = string.Empty;
+            pname.Text = string.Empty;
+            saddress.Text = string.Empty;
+            stel.Text = string.Empty;
+
+        }
     }
 }
 

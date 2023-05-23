@@ -122,7 +122,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 173);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1889, 644);
+            this.panel1.Size = new System.Drawing.Size(1656, 644);
             this.panel1.TabIndex = 1;
             // 
             // button4
@@ -196,7 +196,7 @@
             this.usersgv.RowHeadersWidth = 51;
             this.usersgv.RowTemplate.Height = 24;
             this.usersgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.usersgv.Size = new System.Drawing.Size(1103, 564);
+            this.usersgv.Size = new System.Drawing.Size(838, 541);
             this.usersgv.TabIndex = 12;
             this.usersgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.usersgv_CellContentClick);
             // 
@@ -258,20 +258,20 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1907, 167);
+            this.panel2.Size = new System.Drawing.Size(1656, 167);
             this.panel2.TabIndex = 2;
             // 
             // customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1907, 878);
+            this.ClientSize = new System.Drawing.Size(1661, 878);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "customer";
             this.Text = "customer";

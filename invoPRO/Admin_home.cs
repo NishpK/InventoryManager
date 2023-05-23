@@ -17,18 +17,29 @@ namespace invoPRO
             InitializeComponent();
         }
 
-        
+        public void loadform(object form)
+        {
+            if (this.mainpanel.Controls.Count > 0)
+                this.mainpanel.Controls.RemoveAt(0);
+            Form f = form as Form;
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            this.mainpanel.Controls.Add(f);
+            this.mainpanel.Tag = f;
+            f.Show();
+
+
+
+        }
+
+
+
+
         private void button1_Click(object sender, EventArgs e)
         {
-          /*  // to generate from through panels
-            user_manage m = new user_manage() { TopLevel = false, TopMost = true };
-            m.FormBorderStyle = FormBorderStyle.None;
-            panel2.Controls.Add(m);
-            m.Show();*/
-          user_manage m= new user_manage();
-            m.Show();
+            loadform(new user_manage());
 
-            
+
         }
 
 
@@ -45,22 +56,17 @@ namespace invoPRO
 
         private void button2_Click(object sender, EventArgs e)
         {
-           /* //customer pg panel generate
-            customer c = new customer() { TopLevel = false, TopMost = true };
-            c.FormBorderStyle = FormBorderStyle.None;
-            panel2.Controls.Add(c);
-            c.Show();*/
 
-            customer c= new customer();
-            c.Show();
 
+            // customer c= new customer();
+            //c.Show();
+            loadform(new customer());
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             //supplieer manage button
-            Supplier s = new Supplier();
-            s.Show();
+            loadform(new Supplier());
         }
     }
 }
