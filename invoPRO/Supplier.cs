@@ -22,20 +22,21 @@ namespace invoPRO
             tableload();
         }
 
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Documents\inventoryDB.mdf;Integrated Security=True;Connect Timeout=30");
+   
         void tableload()
         {
+            DBConnection Con = new DBConnection();
             try
             {
                 // database table load to the tableGV
-                Con.Open();
+                Con.connectDB();
                 String Myquery = "SELECT * FROM SupplierTbl";
-                SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
+                SqlDataAdapter da = new SqlDataAdapter(Myquery, Con.connection);
                 SqlCommandBuilder builder = new SqlCommandBuilder();
                 var ds = new DataSet();
                 da.Fill(ds);
                 usersgv.DataSource = ds.Tables[0];
-                Con.Close();
+                Con.closeConnectDB();
 
             }
             catch
@@ -55,18 +56,18 @@ namespace invoPRO
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //add
+            DBConnection Con = new DBConnection();
             try
             {
-                Con.Open();
-                SqlCommand cmd = new SqlCommand("INSERT INTO SupplierTbl (Sid, Sname, Sproduct, Saddress,Stel) VALUES(@Sid,@Sname,@Sproduct,@Saddress,@Stel)", Con);
+                Con.connectDB();
+                SqlCommand cmd = new SqlCommand("INSERT INTO SupplierTbl (Sid, Sname, Sproduct, Saddress,Stel) VALUES(@Sid,@Sname,@Sproduct,@Saddress,@Stel)", Con.connection);
                 cmd.Parameters.AddWithValue("@Sid", sid.Text);
                 cmd.Parameters.AddWithValue("@Sname", sname.Text);
                 cmd.Parameters.AddWithValue("@Sproduct", pname.Text);
                 cmd.Parameters.AddWithValue("@Saddress", saddress.Text);
                 cmd.Parameters.AddWithValue("@Stel", stel.Text);
                 cmd.ExecuteNonQuery();
-                Con.Close();
+                Con.closeConnectDB();  
 
 
                 MessageBox.Show("supplier successfully added");
@@ -94,17 +95,19 @@ namespace invoPRO
             }
             else
             {
+                DBConnection Con = new DBConnection();
+
                 try
                 {
-                    Con.Open();
-                    SqlCommand cmd = new SqlCommand("UPDATE SupplierTbl SET Sname = @Sname, Sproduct = @Sproduct, Saddress=@Saddress,Stel=@Stel WHERE Sid = @Sid", Con);
+                    Con.connectDB();
+                    SqlCommand cmd = new SqlCommand("UPDATE SupplierTbl SET Sname = @Sname, Sproduct = @Sproduct, Saddress=@Saddress,Stel=@Stel WHERE Sid = @Sid", Con.connection);
                     cmd.Parameters.AddWithValue("@Sname", sname.Text);
                     cmd.Parameters.AddWithValue("@Sproduct", pname.Text);
                     cmd.Parameters.AddWithValue("@Saddress", saddress.Text);
                     cmd.Parameters.AddWithValue("@Stel", stel.Text);
                     cmd.Parameters.AddWithValue("@Sid", sid.Text);
                     cmd.ExecuteNonQuery();
-                    Con.Close();
+                    Con.closeConnectDB();
 
                     MessageBox.Show("supplier successfully updated");
                     tableload();
@@ -133,13 +136,14 @@ namespace invoPRO
             }
             else
             {
+                DBConnection Con = new DBConnection();
                 try
                 {
-                    Con.Open();
-                    SqlCommand cmd = new SqlCommand("DELETE FROM SupplierTbl WHERE Sid = @Sid", Con);
+                    Con.connectDB();
+                    SqlCommand cmd = new SqlCommand("DELETE FROM SupplierTbl WHERE Sid = @Sid", Con.connection);
                     cmd.Parameters.AddWithValue("@Sid", sid.Text);
                     cmd.ExecuteNonQuery();
-                    Con.Close();
+                    Con.closeConnectDB();
 
                     MessageBox.Show("supplier successfully deleted");
                     tableload();
@@ -171,30 +175,32 @@ namespace invoPRO
                 MessageBox.Show("Enter product name");
 
             }
-            else
-            {
-               /* try
-                {
-                    Con.Open();
-                    SqlCommand cmd = new SqlCommand("SELECT * FROM SupplierTbl WHERE Sproduct=@Sproduct", Con);
-                    cmd.Parameters.AddWithValue("@Sproduct", search.Text);
-
-                    Con.Close();
+            //else
+            //{
+            //    try
+            //    {
+            //        Con.Open();
+          
 
 
-                    tableload();
+
+            //        SqlCommand cmd = new SqlCommand("SELECT * FROM SupplierTbl WHERE Sproduct=@sprod", Con);
+            //        cmd.Parameters.AddWithValue("@sprod", search.Text);
+            //        cmd.ExecuteNonQuery();
+
+            //        SqlCommandBuilder builder = new SqlCommandBuilder();
+            //        var ds = new DataSet();
+            //        cmd.Fill(ds);
+            //        usersgv.DataSource = ds.Tables[0];
+            //        Con.Close();
 
 
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("An error occurred: " + ex.Message);
-                }*/
-
-               
-
-
-            }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show("An error occurred: " + ex.Message);
+            //    }
+            //}
         }
 
         private void button4_Click(object sender, EventArgs e)

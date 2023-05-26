@@ -18,7 +18,7 @@ namespace invoPRO
             InitializeComponent();
         }
         //database connect
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Documents\inventoryDB.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=inventoryDB.mdf;Integrated Security=True;Connect Timeout=30");
 
         private void Form1_Load(object sender, EventArgs e)
         {
