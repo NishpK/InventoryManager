@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using invoPRO.Entities;
+using invoPRO.Events;
 
 namespace invoPRO
 {
@@ -28,7 +30,16 @@ namespace invoPRO
             ad.Show();
         }
 
-        void tableload()
+        void resetAndReload()
+        {
+            tableload();
+            fnametb.Text = string.Empty;
+            lnametb.Text = string.Empty;
+            unametb.Text = string.Empty;
+            passwordtb.Text = string.Empty;
+        }
+
+            void tableload()
         {
             try
             {
@@ -56,32 +67,21 @@ namespace invoPRO
 
         private void button1_Click_1(object sender, EventArgs e)
         { // add users into database
+            string firstName = fnametb.Text;
+            string lastName = lnametb.Text;
+            string username = unametb.Text;
+            string password = passwordtb.Text;
 
-            try
+            User user = new User(firstName, lastName, username, password);
+            UserEvents userEvents = new UserEvents();
+
+            if (userEvents.RegisterUser(user) == 1)
             {
-                Con.Open();
-                SqlCommand cmd = new SqlCommand("INSERT INTO UserTbl (FirstName, LastName, Uname, Upassword) VALUES(@FirstName,@LastName,@Uname,@Upassword)", Con);
-                cmd.Parameters.AddWithValue("@FirstName", fnametb.Text);
-                cmd.Parameters.AddWithValue("@LastName", lnametb.Text);
-                cmd.Parameters.AddWithValue("@Uname", unametb.Text);
-                cmd.Parameters.AddWithValue("@Upassword", passwordtb.Text);
-                cmd.ExecuteNonQuery();
-                Con.Close();
-
-
                 MessageBox.Show("user successfully added");
-                tableload();
-                //setting the textfeilds blank after datainsert
-                fnametb.Text = "";
-                lnametb.Text = "";
-                unametb.Text = "";
-                passwordtb.Text = "";
+                resetAndReload();
+            }
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred: " + ex.Message);
-            }
+
         }
 
         private void button2_Click(object sender, EventArgs e)

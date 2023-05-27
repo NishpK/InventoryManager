@@ -32,7 +32,6 @@ C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.A
 C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.customer.resources
 C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.Form1.resources
 C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.Properties.Resources.resources
-C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.Supplier.resources
 C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.user_manage.resources
 C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.csproj.GenerateResource.cache
 C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.csproj.CoreCompileInputs.cache
@@ -41,3 +40,4 @@ C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\bin\Debug\invoPRO.e
 C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\bin\Debug\invoPRO.pdb
 C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.exe
 C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.pdb
+C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.SupplierUI.resources

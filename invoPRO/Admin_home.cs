@@ -33,8 +33,6 @@ namespace invoPRO
         }
 
 
-
-
         private void button1_Click(object sender, EventArgs e)
         {
             loadform(new user_manage());
@@ -66,7 +64,7 @@ namespace invoPRO
         private void button3_Click(object sender, EventArgs e)
         {
             //supplieer manage button
-            loadform(new Supplier());
+            //loadform(new Supplier());
         }
     }
 }

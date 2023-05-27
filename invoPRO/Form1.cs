@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using invoPRO.Events;
 
 namespace invoPRO
 {
@@ -67,41 +68,18 @@ namespace invoPRO
 
             else
             {
-                try
+               UserEvents userEvents = new UserEvents();
+                if(userEvents.LoginUser(username, password) == 1)
                 {
-                    String Myquery = "SELECT * FROM UserTbl WHERE Uname= '" + unametb.Text + "' AND Upassword= '" + passwordtb.Text + "'";
-                    SqlDataAdapter sda = new SqlDataAdapter(Myquery, Con);
-                    DataTable dtable = new DataTable();
-                    sda.Fill(dtable);
-
-               
-                    if (dtable.Rows.Count > 0)
-                    {
-
-                            username = unametb.Text;
-                            password = passwordtb.Text;
-                            //change this to customer page later
-                            Admin_home home = new Admin_home();
-                            home.Show();
-                            this.Hide();
-                        MessageBox.Show("welcome user");
-                    }
-
-                    else
-                    {
-                        MessageBox.Show("invalid username or password");
-
-                    }
-
-                }
-                catch
-                {
-                    MessageBox.Show("Error");
+                    Admin_home home = new Admin_home();
+                    home.Show();
+                    this.Hide();
+                    MessageBox.Show("welcome user");
                 }
 
-                finally
+                else
                 {
-                    Con.Close();
+                    MessageBox.Show("Incorrect username or password");
                 }
 
             }
