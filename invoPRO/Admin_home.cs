@@ -1,4 +1,5 @@
-﻿using System;
+﻿using invoPRO.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -65,6 +66,11 @@ namespace invoPRO
         {
             //supplieer manage button
             //loadform(new Supplier());
+        }
+
+        private void inventoryBtn_Click(object sender, EventArgs e)
+        {
+            loadform(new InventoryView());
         }
     }
 }

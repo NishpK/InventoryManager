@@ -120,6 +120,7 @@
             this.Controls.Add(this.Quantitytxt);
             this.Controls.Add(this.ProductNametxt);
             this.Controls.Add(this.InventoryIDtxt);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InventoryView";
             this.Text = "InventoryView";
             this.ResumeLayout(false);
