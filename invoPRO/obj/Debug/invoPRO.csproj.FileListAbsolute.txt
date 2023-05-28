@@ -41,3 +41,4 @@ C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\bin\Debug\invoPRO.p
 C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.exe
 C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.pdb
 C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.SupplierUI.resources
+C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.Views.InventoryView.resources

@@ -59,7 +59,9 @@
       <DependentUpon>customer.cs</DependentUpon>
     </Compile>
     <Compile Include="DBConnection.cs" />
+    <Compile Include="Entities\Inventory.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Events\InventoryEvents.cs" />
     <Compile Include="Events\UserEvents.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -80,6 +82,12 @@
     </Compile>
     <Compile Include="user_manage.Designer.cs">
       <DependentUpon>user_manage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InventoryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\InventoryView.Designer.cs">
+      <DependentUpon>InventoryView.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Admin_home.resx">
       <DependentUpon>Admin_home.cs</DependentUpon>
@@ -105,6 +113,9 @@
     <EmbeddedResource Include="user_manage.resx">
       <DependentUpon>user_manage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\InventoryView.resx">
+      <DependentUpon>InventoryView.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -118,5 +129,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
