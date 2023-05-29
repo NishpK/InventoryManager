@@ -46,42 +46,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin_home.cs">
+    <Compile Include="Views\AdminView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin_home.Designer.cs">
-      <DependentUpon>Admin_home.cs</DependentUpon>
+    <Compile Include="Views\AdminView.Designer.cs">
+      <DependentUpon>AdminView.cs</DependentUpon>
     </Compile>
-    <Compile Include="customer.cs">
+    <Compile Include="Views\CustomerView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="customer.Designer.cs">
-      <DependentUpon>customer.cs</DependentUpon>
+    <Compile Include="Views\CustomerView.Designer.cs">
+      <DependentUpon>CustomerView.cs</DependentUpon>
     </Compile>
     <Compile Include="DBConnection.cs" />
     <Compile Include="Entities\Inventory.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Events\InventoryEvents.cs" />
     <Compile Include="Events\UserEvents.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Views\LoginView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Views\LoginView.Designer.cs">
+      <DependentUpon>LoginView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SupplierUI.cs">
+    <Compile Include="Views\SupplierView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SupplierUI.Designer.cs">
-      <DependentUpon>SupplierUI.cs</DependentUpon>
+    <Compile Include="Views\SupplierView.Designer.cs">
+      <DependentUpon>SupplierView.cs</DependentUpon>
     </Compile>
-    <Compile Include="user_manage.cs">
+    <Compile Include="Views\UserView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="user_manage.Designer.cs">
-      <DependentUpon>user_manage.cs</DependentUpon>
+    <Compile Include="Views\UserView.Designer.cs">
+      <DependentUpon>UserView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\InventoryView.cs">
       <SubType>Form</SubType>
@@ -89,14 +89,20 @@
     <Compile Include="Views\InventoryView.Designer.cs">
       <DependentUpon>InventoryView.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Admin_home.resx">
-      <DependentUpon>Admin_home.cs</DependentUpon>
+    <Compile Include="Views\WelcomeScreenView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\WelcomeScreenView.Designer.cs">
+      <DependentUpon>WelcomeScreenView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\AdminView.resx">
+      <DependentUpon>AdminView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="customer.resx">
-      <DependentUpon>customer.cs</DependentUpon>
+    <EmbeddedResource Include="Views\CustomerView.resx">
+      <DependentUpon>CustomerView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Views\LoginView.resx">
+      <DependentUpon>LoginView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -107,14 +113,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SupplierUI.resx">
-      <DependentUpon>SupplierUI.cs</DependentUpon>
+    <EmbeddedResource Include="Views\SupplierView.resx">
+      <DependentUpon>SupplierView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="user_manage.resx">
-      <DependentUpon>user_manage.cs</DependentUpon>
+    <EmbeddedResource Include="Views\UserView.resx">
+      <DependentUpon>UserView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\InventoryView.resx">
       <DependentUpon>InventoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\WelcomeScreenView.resx">
+      <DependentUpon>WelcomeScreenView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

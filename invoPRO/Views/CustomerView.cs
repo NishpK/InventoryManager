@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace invoPRO
 {
-    public partial class customer : Form
+    public partial class CustomerView : Form
     {
-        public customer()
+        public CustomerView()
         {
             InitializeComponent();
             tableload();

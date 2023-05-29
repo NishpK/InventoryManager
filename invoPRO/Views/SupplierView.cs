@@ -14,11 +14,11 @@ using System.Xml.Linq;
 
 namespace invoPRO
 {
-    public partial class SupplierUI : Form
+    public partial class SupplierView : Form
     {
 
 
-        public SupplierUI()
+        public SupplierView()
         {
             InitializeComponent();
             tableload();

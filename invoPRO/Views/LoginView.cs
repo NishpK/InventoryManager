@@ -26,10 +26,6 @@ namespace invoPRO
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -60,10 +56,10 @@ namespace invoPRO
 
             if (username == "admin" && password == "123")
             {
-                Admin_home home = new Admin_home();
+                AdminView home = new AdminView();
                 home.Show();
                 this.Hide();
-                MessageBox.Show("welcome admin");
+                MessageBox.Show("Welcome Admin");
             }
 
             else
@@ -71,10 +67,10 @@ namespace invoPRO
                UserEvents userEvents = new UserEvents();
                 if(userEvents.LoginUser(username, password) == 1)
                 {
-                    Admin_home home = new Admin_home();
+                    AdminView home = new AdminView();
                     home.Show();
                     this.Hide();
-                    MessageBox.Show("welcome user");
+                    MessageBox.Show("Welcome User");
                 }
 
                 else

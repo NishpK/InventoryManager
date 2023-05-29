@@ -15,9 +15,9 @@ using invoPRO.Events;
 
 namespace invoPRO
 {
-    public partial class user_manage : Form
+    public partial class UserView : Form
     {
-        public user_manage()
+        public UserView()
         {
             InitializeComponent();
             tableload();
@@ -26,7 +26,7 @@ namespace invoPRO
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Documents\inventoryDB.mdf;Integrated Security=True;Connect Timeout=30");
         private void button1_Click(object sender, EventArgs e)
         {
-            Admin_home ad = new Admin_home();
+            AdminView ad = new AdminView();
             ad.Show();
         }
 

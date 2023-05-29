@@ -1,6 +1,6 @@
 ﻿namespace invoPRO
 {
-    partial class customer
+    partial class CustomerView
     {
         /// <summary>
         /// Required designer variable.

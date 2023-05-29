@@ -1,6 +1,6 @@
 ﻿namespace invoPRO
 {
-    partial class user_manage
+    partial class UserView
     {
         /// <summary>
         /// Required designer variable.

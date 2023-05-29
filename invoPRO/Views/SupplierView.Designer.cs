@@ -1,6 +1,6 @@
 ﻿namespace invoPRO
 {
-    partial class SupplierUI
+    partial class SupplierView
     {
         /// <summary>
         /// Required designer variable.

@@ -11,11 +11,12 @@ using System.Windows.Forms;
 
 namespace invoPRO
 {
-    public partial class Admin_home : Form
+    public partial class AdminView : Form
     {
-        public Admin_home()
+        public AdminView()
         {
             InitializeComponent();
+            loadform(new WelcomeScreenView());
         }
 
         public void loadform(object form)
@@ -36,7 +37,7 @@ namespace invoPRO
 
         private void button1_Click(object sender, EventArgs e)
         {
-            loadform(new user_manage());
+            loadform(new UserView());
 
 
         }
@@ -56,16 +57,15 @@ namespace invoPRO
         private void button2_Click(object sender, EventArgs e)
         {
 
-
             // customer c= new customer();
             //c.Show();
-            loadform(new customer());
+            loadform(new CustomerView());
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             //supplieer manage button
-            //loadform(new Supplier());
+            loadform(new SupplierView());
         }
 
         private void inventoryBtn_Click(object sender, EventArgs e)
