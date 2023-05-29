@@ -17,8 +17,8 @@ namespace invoPRO
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new AdminView());
-            Application.Run(new Form1());
+            Application.Run(new AdminView());
+            //Application.Run(new Form1());
      
         }
     }
