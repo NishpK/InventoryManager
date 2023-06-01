@@ -21,5 +21,16 @@ namespace invoPRO.Entities
             this.FirstName = firstName;
             this.LastName = lastName;
         }
+
+        public User(string username)
+        {
+            this.Username = username;
+        }
+
+        public User(String username, String password)
+        {
+            this.Username = username;
+            this.Password = password;
+        }
     }
 }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using invoPRO.Events;
+using invoPRO.Entities;
 
 namespace invoPRO
 {
@@ -45,13 +46,13 @@ namespace invoPRO
             passwordtb.Text = string.Empty;
         }
 
+        //log in 
         private void button1_Click(object sender, EventArgs e)
         {
-            //log in 
-            String username, password;
 
-            username = unametb.Text;
-            password= passwordtb.Text;
+
+            string username = unametb.Text;
+            string password= passwordtb.Text;
 
 
             if (username == "admin" && password == "123")
@@ -64,6 +65,9 @@ namespace invoPRO
 
             else
             {
+                username = unametb.Text;
+                password = passwordtb.Text;
+
                UserEvents userEvents = new UserEvents();
                 if(userEvents.LoginUser(username, password) == 1)
                 {

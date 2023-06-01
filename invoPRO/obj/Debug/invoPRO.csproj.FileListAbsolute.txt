@@ -15,10 +15,8 @@ C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\bin\Debug\invoPRO.exe
 C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\bin\Debug\invoPRO.exe.config
 C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.csproj.AssemblyReference.cache
 C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.csproj.SuggestedBindingRedirects.cache
-C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.Admin_home.resources
 C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.Form1.resources
 C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.Properties.Resources.resources
-C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.user_manage.resources
 C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.csproj.GenerateResource.cache
 C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.csproj.CoreCompileInputs.cache
 C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.exe
@@ -43,3 +41,9 @@ C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.C
 C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.SupplierView.resources
 C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.UserView.resources
 C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.Views.WelcomeScreenView.resources
+C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.AdminView.resources
+C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.CustomerView.resources
+C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.SupplierView.resources
+C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.UserView.resources
+C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.Views.InventoryView.resources
+C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.Views.WelcomeScreenView.resources

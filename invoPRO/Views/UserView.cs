@@ -12,6 +12,7 @@ using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using invoPRO.Entities;
 using invoPRO.Events;
+using System.Data.Common;
 
 namespace invoPRO
 {
@@ -22,8 +23,7 @@ namespace invoPRO
             InitializeComponent();
             tableload();
         }
-        //connecting the database
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Documents\inventoryDB.mdf;Integrated Security=True;Connect Timeout=30");
+
         private void button1_Click(object sender, EventArgs e)
         {
             AdminView ad = new AdminView();
@@ -43,15 +43,16 @@ namespace invoPRO
         {
             try
             {
-                // database table load to the tableGV
-                Con.Open();
+                DBConnection Con = new DBConnection();
+
+                Con.connectDB();
                 String Myquery = "SELECT * FROM UserTbl";
-                SqlDataAdapter da = new SqlDataAdapter(Myquery, Con);
+                SqlDataAdapter da = new SqlDataAdapter(Myquery, Con.connection);
                 SqlCommandBuilder builder = new SqlCommandBuilder();
                 var ds = new DataSet();
                 da.Fill(ds);
                 usersgv.DataSource = ds.Tables[0];
-                Con.Close();
+                Con.closeConnectDB();
 
             }
             catch
@@ -65,8 +66,9 @@ namespace invoPRO
 
         }
 
+        // add users into database
         private void button1_Click_1(object sender, EventArgs e)
-        { // add users into database
+        { 
             string firstName = fnametb.Text;
             string lastName = lnametb.Text;
             string username = unametb.Text;
@@ -80,75 +82,60 @@ namespace invoPRO
                 MessageBox.Show("user successfully added");
                 resetAndReload();
             }
-
-
         }
-
+        //edit user data where username=?
         private void button2_Click(object sender, EventArgs e)
-        { // edit user data where username=?
-            try
-            {
-                Con.Open();
-                SqlCommand cmd = new SqlCommand("UPDATE UserTbl SET FirstName = @FirstName, LastName = @LastName, Upassword = @Upassword WHERE Uname = @Uname", Con);
-                cmd.Parameters.AddWithValue("@FirstName", fnametb.Text);
-                cmd.Parameters.AddWithValue("@LastName", lnametb.Text);
-                cmd.Parameters.AddWithValue("@Upassword", passwordtb.Text);
-                cmd.Parameters.AddWithValue("@Uname", unametb.Text);
-                cmd.ExecuteNonQuery();
-                Con.Close();
+        {
 
-                MessageBox.Show("User successfully updated");
-                tableload();
-                fnametb.Text = "";
-                lnametb.Text = "";
-                unametb.Text = "";
-                passwordtb.Text = "";
-            }
-            catch (Exception ex)
+            string firstname = fnametb.Text;
+            string lastname = lnametb.Text;
+            string username = unametb.Text;
+            string password = passwordtb.Text;
+
+            User user = new User(firstname, lastname, username, password);
+            UserEvents userEvents = new UserEvents();
+
+            if(userEvents.UpdateUser(user) == 1)
             {
-                MessageBox.Show("An error occurred: " + ex.Message);
+                MessageBox.Show("User has been updated");
+                resetAndReload();
             }
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            // delete 
-
             if (unametb.Text == "")
             {
-                MessageBox.Show("Enter username");
-
+                MessageBox.Show("Enter username", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
+
             else
             {
-                try
+                string username = unametb.Text;
+
+                string message = "You are going to delete the user " + username;
+
+                var Dialog = MessageBox.Show(message, "Deleting User", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (Dialog == DialogResult.Yes)
                 {
-                    Con.Open();
-                    SqlCommand cmd = new SqlCommand("DELETE FROM UserTbl WHERE Uname = @Uname", Con);
-                    cmd.Parameters.AddWithValue("@Uname", unametb.Text);
-                    cmd.ExecuteNonQuery();
-                    Con.Close();
+                    User user = new User(username);
+                    UserEvents userEvents = new UserEvents();
 
-                    MessageBox.Show("User successfully deleted");
-                    tableload();
-                    fnametb.Text = "";
-                    lnametb.Text = "";
-                    unametb.Text = "";
-                    passwordtb.Text = "";
+                    if (userEvents.DeleteUser(user) == 1)
+                    {
+                        MessageBox.Show("User was deleted succesfully");
+                        resetAndReload();
+                    }
+
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("An error occurred: " + ex.Message);
-                }
-
-
             }
         }
 
-
+        // selected row of the table added to textfeilds 
         private void usersgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // selected row of the table added to textfeilds 
             fnametb.Text = usersgv.SelectedRows[0].Cells[0].Value.ToString();
             lnametb.Text = usersgv.SelectedRows[0].Cells[1].Value.ToString();
             unametb.Text = usersgv.SelectedRows[0].Cells[2].Value.ToString();
@@ -159,10 +146,8 @@ namespace invoPRO
 
         private void passwordtb_TextChanged(object sender, EventArgs e)
         {
-            // The password character is an asterisk.
             passwordtb.PasswordChar = '*';
 
-            // The control will allow no more than 14 characters.
             passwordtb.MaxLength = 14;
         }
 
@@ -178,18 +163,9 @@ namespace invoPRO
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //clear button 
-            fnametb.Text = "";
-            lnametb.Text = "";
-            unametb.Text = "";
-            passwordtb.Text = "";
-
+            resetAndReload();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
     }
 }

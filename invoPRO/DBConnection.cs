@@ -20,8 +20,6 @@ namespace invoPRO
             }
             catch (Exception ex)
             {
-                //String message = ex.ToString();
-                //MessageBox.Show(message);
                 return ex.ToString();
             }
         }
