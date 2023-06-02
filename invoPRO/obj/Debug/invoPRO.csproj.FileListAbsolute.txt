@@ -9,8 +9,6 @@ C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.csproj.GenerateRes
 C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.csproj.CoreCompileInputs.cache
 C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.exe
 C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.pdb
-C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.Admin_home.resources
-C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.user_manage.resources
 C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\bin\Debug\invoPRO.exe
 C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\bin\Debug\invoPRO.exe.config
 C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.csproj.AssemblyReference.cache
@@ -22,8 +20,6 @@ C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.cspro
 C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.exe
 C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.pdb
 C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\bin\Debug\invoPRO.pdb
-C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.customer.resources
-C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.Supplier.resources
 C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.csproj.AssemblyReference.cache
 C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.csproj.SuggestedBindingRedirects.cache
 C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.Form1.resources
@@ -47,3 +43,9 @@ C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.Suppl
 C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.UserView.resources
 C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.Views.InventoryView.resources
 C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.Views.WelcomeScreenView.resources
+C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.AdminView.resources
+C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.CustomerView.resources
+C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.SupplierView.resources
+C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.UserView.resources
+C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.Views.InventoryView.resources
+C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.Views.WelcomeScreenView.resources

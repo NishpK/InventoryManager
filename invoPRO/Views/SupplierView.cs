@@ -31,6 +31,7 @@ namespace invoPRO
             pname.Text = string.Empty;
             saddress.Text = string.Empty;
             stel.Text = string.Empty;
+            tableload();
         }
 
    
@@ -56,13 +57,19 @@ namespace invoPRO
             }
         }
 
-        private void usersgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        void Guselect()
         {
             sid.Text = usersgv.SelectedRows[0].Cells[0].Value.ToString();
             sname.Text = usersgv.SelectedRows[0].Cells[1].Value.ToString();
             pname.Text = usersgv.SelectedRows[0].Cells[2].Value.ToString();
             saddress.Text = usersgv.SelectedRows[0].Cells[3].Value.ToString();
             stel.Text = usersgv.SelectedRows[0].Cells[4].Value.ToString();
+
+        }
+
+        private void usersgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           Guselect();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -77,44 +84,38 @@ namespace invoPRO
 
             
             clearTxtBoxes();
-            tableload();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+            string id=sid.Text;
+            string name=sname.Text;
+            string product=pname.Text;
+            string address=saddress.Text;
+            string telnumber=stel.Text;
+
+            Supplier supplier = new Supplier(id ,name,product,address,telnumber);
+            SupplierEvents supplierEvents = new SupplierEvents();
+            
+
             //update
             if (sid.Text == "")
             {
-                MessageBox.Show("Enter customer id");
+                MessageBox.Show("Enter Supplier id");
             }
             else
             {
-                DBConnection Con = new DBConnection();
 
-                try
+                if(supplierEvents.UpdateSupplier(supplier) == 1)
                 {
-                    Con.connectDB();
-                    SqlCommand cmd = new SqlCommand("UPDATE SupplierTbl SET Sname = @Sname, Sproduct = @Sproduct, Saddress=@Saddress,Stel=@Stel WHERE Sid = @Sid", Con.connection);
-                    cmd.Parameters.AddWithValue("@Sname", sname.Text);
-                    cmd.Parameters.AddWithValue("@Sproduct", pname.Text);
-                    cmd.Parameters.AddWithValue("@Saddress", saddress.Text);
-                    cmd.Parameters.AddWithValue("@Stel", stel.Text);
-                    cmd.Parameters.AddWithValue("@Sid", sid.Text);
-                    cmd.ExecuteNonQuery();
-                    Con.closeConnectDB();
+                    MessageBox.Show("Supplier has been updated");
+                    clearTxtBoxes();
+                }
+                
 
-                    MessageBox.Show("supplier successfully updated");
-                    tableload();
-                    sid.Text = string.Empty;
-                    sname.Text = string.Empty;
-                    pname.Text = string.Empty;
-                    saddress.Text = string.Empty;
-                    stel.Text = string.Empty;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("An error occurred: " + ex.Message);
-                }
+
             }
         }
 
@@ -152,6 +153,7 @@ namespace invoPRO
                 {
                     MessageBox.Show("An error occurred: " + ex.Message);
                 }
+                clearTxtBoxes();
             }
         }
 
@@ -198,12 +200,8 @@ namespace invoPRO
         }
 
         private void button4_Click(object sender, EventArgs e)
-        {// clear button
-            sid.Text = string.Empty;
-            sname.Text = string.Empty;
-            pname.Text = string.Empty;
-            saddress.Text = string.Empty;
-            stel.Text = string.Empty;
+        {
+            clearTxtBoxes();
 
         }
     }
