@@ -8,6 +8,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace invoPRO
 {
@@ -20,11 +21,27 @@ namespace invoPRO
         {
             try
             {
+                Con.connectDB();
+                SqlCommand cmd = new SqlCommand("INSERT INTO SupplierTbl (Sid, Sname,Sproduct, Saddress,Stel) VALUES(@Sid,@Sname,@Sproduct,@Saddress,@Stel)", Con.connection);
+                cmd.Parameters.AddWithValue("@Sid", supplier.Id);
+                cmd.Parameters.AddWithValue("@Sname", supplier.Name);
+                cmd.Parameters.AddWithValue("@Sproduct", supplier.Product);
+                cmd.Parameters.AddWithValue("@Saddress", supplier.Address);
+                cmd.Parameters.AddWithValue("@Stel", supplier.TelNumber);
+                cmd.ExecuteNonQuery();
+                Con.closeConnectDB();
                 return 1;
-            } catch (Exception ex)
+
+                
+
+                
+            }
+            catch (Exception ex)
             {
                 return 0;
+                MessageBox.Show("An error occurred: " + ex.Message);
             }
+
         }
 
         public int UpdateSupplier(Supplier supplier)
@@ -48,6 +65,29 @@ namespace invoPRO
             {
                 MessageBox.Show("An error occurred: " + ex.Message);
                 return 0;
+            }
+        }
+
+        public int DeleteSupplier(Supplier supplier)
+        {
+           
+            try
+            {
+                Con.connectDB();
+                SqlCommand cmd = new SqlCommand("DELETE FROM SupplierTbl WHERE Sid = @Sid", Con.connection);
+                cmd.Parameters.AddWithValue("@Sid", supplier.Id);
+                cmd.ExecuteNonQuery();
+                Con.closeConnectDB();
+                return 1;
+
+                
+
+
+            }
+            catch (Exception ex)
+            {
+                return 0;
+                MessageBox.Show("An error occurred: " + ex.Message);
             }
         }
     }

@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pname = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -83,27 +85,27 @@
             // 
             // pname
             // 
-            this.pname.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pname.Location = new System.Drawing.Point(301, 244);
+            this.pname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.pname.Location = new System.Drawing.Point(227, 249);
             this.pname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pname.Name = "pname";
-            this.pname.Size = new System.Drawing.Size(389, 34);
+            this.pname.Size = new System.Drawing.Size(248, 23);
             this.pname.TabIndex = 19;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label3.Location = new System.Drawing.Point(61, 249);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(203, 29);
+            this.label3.Size = new System.Drawing.Size(119, 17);
             this.label3.TabIndex = 18;
             this.label3.Text = "Supplied product:";
             // 
             // button4
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(600, 553);
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.button4.Location = new System.Drawing.Point(244, 566);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(133, 42);
@@ -114,39 +116,39 @@
             // 
             // sid
             // 
-            this.sid.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sid.Location = new System.Drawing.Point(301, 86);
+            this.sid.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.sid.Location = new System.Drawing.Point(227, 91);
             this.sid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sid.Name = "sid";
-            this.sid.Size = new System.Drawing.Size(389, 34);
+            this.sid.Size = new System.Drawing.Size(248, 23);
             this.sid.TabIndex = 16;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label7.Location = new System.Drawing.Point(61, 91);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(133, 29);
+            this.label7.Size = new System.Drawing.Size(77, 17);
             this.label7.TabIndex = 15;
             this.label7.Text = "Supplier ID";
             // 
             // stel
             // 
-            this.stel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stel.Location = new System.Drawing.Point(301, 423);
+            this.stel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.stel.Location = new System.Drawing.Point(227, 423);
             this.stel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.stel.Name = "stel";
-            this.stel.Size = new System.Drawing.Size(389, 34);
+            this.stel.Size = new System.Drawing.Size(248, 23);
             this.stel.TabIndex = 14;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label6.Location = new System.Drawing.Point(61, 423);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(170, 29);
+            this.label6.Size = new System.Drawing.Size(100, 17);
             this.label6.TabIndex = 13;
             this.label6.Text = "Telephone no.";
             // 
@@ -157,10 +159,26 @@
             this.usersgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.usersgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.usersgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.usersgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.usersgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.usersgv.DefaultCellStyle = dataGridViewCellStyle2;
             this.usersgv.EnableHeadersVisualStyles = false;
             this.usersgv.GridColor = System.Drawing.Color.Black;
-            this.usersgv.Location = new System.Drawing.Point(1404, -37);
+            this.usersgv.Location = new System.Drawing.Point(623, 17);
             this.usersgv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.usersgv.Name = "usersgv";
             this.usersgv.RowHeadersVisible = false;
@@ -173,8 +191,8 @@
             // 
             // button3
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(425, 553);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.button3.Location = new System.Drawing.Point(431, 491);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(133, 42);
@@ -185,8 +203,8 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(251, 553);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.button2.Location = new System.Drawing.Point(244, 491);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(133, 42);
@@ -197,8 +215,8 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(84, 553);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.button1.Location = new System.Drawing.Point(64, 491);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 42);
@@ -209,40 +227,40 @@
             // 
             // saddress
             // 
-            this.saddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saddress.Location = new System.Drawing.Point(301, 334);
+            this.saddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.saddress.Location = new System.Drawing.Point(227, 334);
             this.saddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.saddress.Multiline = true;
             this.saddress.Name = "saddress";
-            this.saddress.Size = new System.Drawing.Size(389, 50);
+            this.saddress.Size = new System.Drawing.Size(248, 50);
             this.saddress.TabIndex = 8;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label5.Location = new System.Drawing.Point(61, 337);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 29);
+            this.label5.Size = new System.Drawing.Size(60, 17);
             this.label5.TabIndex = 7;
             this.label5.Text = "Address";
             // 
             // sname
             // 
-            this.sname.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sname.Location = new System.Drawing.Point(301, 166);
+            this.sname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.sname.Location = new System.Drawing.Point(227, 171);
             this.sname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sname.Name = "sname";
-            this.sname.Size = new System.Drawing.Size(389, 34);
+            this.sname.Size = new System.Drawing.Size(248, 23);
             this.sname.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label2.Location = new System.Drawing.Point(61, 171);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(181, 29);
+            this.label2.Size = new System.Drawing.Size(105, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Supplier Name:";
             // 
@@ -276,7 +294,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1779, 167);
             this.panel2.TabIndex = 3;
@@ -299,7 +317,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SupplierView";
             this.Text = "Supplier";
             this.panel1.ResumeLayout(false);

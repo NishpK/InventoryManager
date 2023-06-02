@@ -75,15 +75,21 @@ namespace invoPRO
         private void button1_Click(object sender, EventArgs e)
         {
 
-            string supplierID = sid.Text;
-            string supName = sname.Text;
-            string productName = pname.Text;
-            string supAddress = saddress.Text;
-            string supText = stel.Text;
+            string id = sid.Text;
+            string name = sname.Text;
+            string product = pname.Text;
+            string address = saddress.Text;
+            string telnumber = stel.Text;
 
+            Supplier supplier= new Supplier(id,name, product, address, telnumber);
+            SupplierEvents supplierEvents = new SupplierEvents();
 
+            if (supplierEvents.RegisterSupplier(supplier)==1)
+            {
+                clearTxtBoxes();
+                MessageBox.Show("user successfully added");
+            }
             
-            clearTxtBoxes();
             
         }
 
@@ -118,42 +124,32 @@ namespace invoPRO
 
             }
         }
-
+        //delete button
         private void button3_Click(object sender, EventArgs e)
         {
-           
-            //delete button
+            string id = sid.Text;
+            string name = sname.Text;
+            string product = pname.Text;
+            string address = saddress.Text;
+            string telnumber = stel.Text;
+
+            
+            Supplier supplier = new Supplier(id, name, product, address, telnumber);
+            SupplierEvents supplierEvents = new SupplierEvents();
 
             if (sid.Text == "")
             {
                 MessageBox.Show("Enter customer id");
 
             }
+            else if(supplierEvents.DeleteSupplier(supplier)==1)
+            {
+                MessageBox.Show("supplier successfully deleted");
+                clearTxtBoxes();
+            }
             else
             {
-                DBConnection Con = new DBConnection();
-                try
-                {
-                    Con.connectDB();
-                    SqlCommand cmd = new SqlCommand("DELETE FROM SupplierTbl WHERE Sid = @Sid", Con.connection);
-                    cmd.Parameters.AddWithValue("@Sid", sid.Text);
-                    cmd.ExecuteNonQuery();
-                    Con.closeConnectDB();
-
-                    MessageBox.Show("supplier successfully deleted");
-                    tableload();
-                    sid.Text = string.Empty;
-                    sname.Text = string.Empty;
-                    pname.Text = string.Empty;
-                    saddress.Text = string.Empty;
-                    stel.Text = string.Empty;
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("An error occurred: " + ex.Message);
-                }
-                clearTxtBoxes();
+                MessageBox.Show("error");
             }
         }
 

@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Customer.cs" />
+    <Compile Include="Events\CustomerEvents.cs" />
     <Compile Include="Entities\Supplier.cs" />
     <Compile Include="Events\SupplierEvents.cs" />
     <Compile Include="Views\AdminView.cs">
