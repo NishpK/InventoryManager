@@ -76,6 +76,7 @@ namespace invoPRO.Views
             if (salesEvents.newSales(sales)==1)
             {
                 subtotal = subtotal + totprice;
+                
                 itemIDs[subTransaction] = itemID;
                 quantities[subTransaction] = qty;
 
