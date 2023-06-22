@@ -55,6 +55,24 @@
     <Compile Include="Events\SupplierEvents.cs" />
     <Compile Include="Entities\InventoryIn.cs" />
     <Compile Include="Events\InventoryInEvents.cs" />
+    <Compile Include="inventoryInreport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inventoryInreport.Designer.cs">
+      <DependentUpon>inventoryInreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="transactionReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="transactionReport.Designer.cs">
+      <DependentUpon>transactionReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ItemView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ItemView.Designer.cs">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\InventoryInVeiw.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +120,15 @@
     <Compile Include="Views\WelcomeScreenView.Designer.cs">
       <DependentUpon>WelcomeScreenView.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="inventoryInreport.resx">
+      <DependentUpon>inventoryInreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="transactionReport.resx">
+      <DependentUpon>transactionReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemView.resx">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminView.resx">
       <DependentUpon>AdminView.cs</DependentUpon>
     </EmbeddedResource>

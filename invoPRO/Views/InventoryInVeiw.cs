@@ -54,8 +54,7 @@ namespace invoPRO
 
             if (inventoryInEvents.neworder(inventoryIn) == 1)
             {
-                itemIDs[subTransaction] = itemID;
-                quantities[subTransaction] = qty;
+                
                 halfClear();
                 salesDataGrid.Rows.Add(subTransaction, itemID, supplierID,qty);
                 subTransaction++;

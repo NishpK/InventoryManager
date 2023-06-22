@@ -48,3 +48,6 @@ C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.exe
 C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.pdb
 C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.Views.DoTransaction.resources
 C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.InventoryInVeiw.resources
+C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.ItemView.resources
+C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.transactionReport.resources
+C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.inventoryInreport.resources

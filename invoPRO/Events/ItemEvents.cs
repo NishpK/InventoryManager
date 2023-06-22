@@ -44,12 +44,14 @@ namespace invoPRO.Events
             {
                 Con.connectDB();
                 SqlCommand cmd = new SqlCommand("UPDATE Items SET name = @name, brand = @brand, qty = @qty, unitPrice = @unitP WHERE itemID = @id", Con.connection);
-                cmd.Parameters.AddWithValue("@id", items.itemID);
+                
                 cmd.Parameters.AddWithValue("@name", items.name);
                 cmd.Parameters.AddWithValue("@brand", items.brand);
                 cmd.Parameters.AddWithValue("@qty", items.qty);
                 cmd.Parameters.AddWithValue("@unitP", items.unitPrice);
+                cmd.Parameters.AddWithValue("@id", items.itemID);
                 cmd.ExecuteNonQuery();
+                Con.closeConnectDB();
                 return 1;
             }
 
@@ -57,7 +59,7 @@ namespace invoPRO.Events
             {
                 string message = "An error occured : " + ex.ToString();
                 MessageBox.Show(message);
-                Con.closeConnectDB();
+              
                 return 0;
             }
 
@@ -83,6 +85,25 @@ namespace invoPRO.Events
                 return 0;
             }
 
+        }
+
+        public int deleteitem(Items items)
+        {
+            try
+            {
+                Con.connectDB();
+                SqlCommand cmd = new SqlCommand("DELETE FROM Items WHERE ItemID = @ItemID", Con.connection);
+                cmd.Parameters.AddWithValue("@ItemID", items.itemID);
+                cmd.ExecuteNonQuery();
+                Con.closeConnectDB();
+
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return 0;
+            }
         }
 
     }

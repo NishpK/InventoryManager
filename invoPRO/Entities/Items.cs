@@ -24,6 +24,10 @@ namespace invoPRO.Entities
             this.qty = qty;
             this.unitPrice = unitPrice;
         }
+        public Items(int itemID)
+        {
+            this.itemID = itemID;
+        }
 
         //use this constructor during a transaction to ajudst inventory 
         public Items(int itemID, int qty) 

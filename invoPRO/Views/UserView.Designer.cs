@@ -66,6 +66,7 @@
             this.fnametb.Name = "fnametb";
             this.fnametb.Size = new System.Drawing.Size(327, 23);
             this.fnametb.TabIndex = 2;
+            this.fnametb.TextChanged += new System.EventHandler(this.fnametb_TextChanged);
             // 
             // label3
             // 
@@ -76,6 +77,7 @@
             this.label3.Size = new System.Drawing.Size(80, 17);
             this.label3.TabIndex = 3;
             this.label3.Text = "Last Name:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // lnametb
             // 
@@ -85,6 +87,7 @@
             this.lnametb.Name = "lnametb";
             this.lnametb.Size = new System.Drawing.Size(327, 23);
             this.lnametb.TabIndex = 4;
+            this.lnametb.TextChanged += new System.EventHandler(this.lnametb_TextChanged);
             // 
             // label4
             // 
@@ -95,6 +98,7 @@
             this.label4.Size = new System.Drawing.Size(79, 17);
             this.label4.TabIndex = 5;
             this.label4.Text = "UserName:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // unametb
             // 
@@ -104,6 +108,7 @@
             this.unametb.Name = "unametb";
             this.unametb.Size = new System.Drawing.Size(328, 23);
             this.unametb.TabIndex = 6;
+            this.unametb.TextChanged += new System.EventHandler(this.unametb_TextChanged);
             // 
             // label5
             // 
@@ -114,6 +119,7 @@
             this.label5.Size = new System.Drawing.Size(73, 17);
             this.label5.TabIndex = 7;
             this.label5.Text = "Password:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // passwordtb
             // 
@@ -207,6 +213,7 @@
             this.label1.Size = new System.Drawing.Size(236, 31);
             this.label1.TabIndex = 21;
             this.label1.Text = "User Management";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // usersgv
             // 
