@@ -77,11 +77,10 @@ namespace invoPRO
 
             string id = sid.Text;
             string name = sname.Text;
-            string product = pname.Text;
             string address = saddress.Text;
             string telnumber = stel.Text;
 
-            Supplier supplier= new Supplier(id,name, product, address, telnumber);
+            Supplier supplier= new Supplier(id,name, address, telnumber);
             SupplierEvents supplierEvents = new SupplierEvents();
 
             if (supplierEvents.RegisterSupplier(supplier)==1)
@@ -98,11 +97,11 @@ namespace invoPRO
 
             string id=sid.Text;
             string name=sname.Text;
-            string product=pname.Text;
+
             string address=saddress.Text;
             string telnumber=stel.Text;
 
-            Supplier supplier = new Supplier(id ,name,product,address,telnumber);
+            Supplier supplier = new Supplier(id ,name,address,telnumber);
             SupplierEvents supplierEvents = new SupplierEvents();
             
 
@@ -129,12 +128,11 @@ namespace invoPRO
         {
             string id = sid.Text;
             string name = sname.Text;
-            string product = pname.Text;
             string address = saddress.Text;
             string telnumber = stel.Text;
 
             
-            Supplier supplier = new Supplier(id, name, product, address, telnumber);
+            Supplier supplier = new Supplier(id, name, address, telnumber);
             SupplierEvents supplierEvents = new SupplierEvents();
 
             if (sid.Text == "")

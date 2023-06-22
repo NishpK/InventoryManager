@@ -59,7 +59,7 @@ namespace invoPRO
 
             // customer c= new customer();
             //c.Show();
-            loadform(new CustomerView());
+            //loadform(new CustomerView());
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -70,7 +70,7 @@ namespace invoPRO
 
         private void inventoryBtn_Click(object sender, EventArgs e)
         {
-            loadform(new InventoryView());
+            loadform(new DoTransaction());
         }
     }
 }

@@ -22,24 +22,20 @@ namespace invoPRO
             try
             {
                 Con.connectDB();
-                SqlCommand cmd = new SqlCommand("INSERT INTO SupplierTbl (Sid, Sname,Sproduct, Saddress,Stel) VALUES(@Sid,@Sname,@Sproduct,@Saddress,@Stel)", Con.connection);
+                SqlCommand cmd = new SqlCommand("INSERT INTO SupplierTbl (Sid, Sname, Saddress,Stel) VALUES(@Sid,@Sname,@Saddress,@Stel)", Con.connection);
                 cmd.Parameters.AddWithValue("@Sid", supplier.Id);
                 cmd.Parameters.AddWithValue("@Sname", supplier.Name);
-                cmd.Parameters.AddWithValue("@Sproduct", supplier.Product);
                 cmd.Parameters.AddWithValue("@Saddress", supplier.Address);
                 cmd.Parameters.AddWithValue("@Stel", supplier.TelNumber);
                 cmd.ExecuteNonQuery();
                 Con.closeConnectDB();
                 return 1;
-
-                
-
                 
             }
             catch (Exception ex)
             {
-                return 0;
                 MessageBox.Show("An error occurred: " + ex.Message);
+                return 0;
             }
 
         }
@@ -49,16 +45,14 @@ namespace invoPRO
             try
             {
                 Con.connectDB();
-                SqlCommand cmd = new SqlCommand("UPDATE SupplierTbl SET Sname = @Sname, Sproduct = @Sproduct, Saddress=@Saddress,Stel=@Stel WHERE Sid = @Sid", Con.connection);
+                SqlCommand cmd = new SqlCommand("UPDATE SupplierTbl SET Sname=@Sname, Saddress=@Saddress,Stel=@Stel WHERE Sid = @Sid", Con.connection);
                 cmd.Parameters.AddWithValue("@Sname", supplier.Name);
-                cmd.Parameters.AddWithValue("@Sproduct", supplier.Product);
                 cmd.Parameters.AddWithValue("@Saddress", supplier.Address);
                 cmd.Parameters.AddWithValue("@Stel", supplier.TelNumber);
                 cmd.Parameters.AddWithValue("@Sid", supplier.Id);
                 cmd.ExecuteNonQuery();
                 Con.closeConnectDB();
                 return 1;
-
 
             }
             catch (Exception ex)
@@ -80,14 +74,11 @@ namespace invoPRO
                 Con.closeConnectDB();
                 return 1;
 
-                
-
-
             }
             catch (Exception ex)
             {
-                return 0;
                 MessageBox.Show("An error occurred: " + ex.Message);
+                return 0;
             }
         }
     }

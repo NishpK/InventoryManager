@@ -33,7 +33,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.inventoryBtn = new System.Windows.Forms.Button();
+            this.MakeSalesBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.invoprotxt = new System.Windows.Forms.Label();
             this.mainpanel = new System.Windows.Forms.Panel();
@@ -94,7 +94,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panel2.Controls.Add(this.inventoryBtn);
+            this.panel2.Controls.Add(this.MakeSalesBtn);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
@@ -106,18 +106,18 @@
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // inventoryBtn
+            // MakeSalesBtn
             // 
-            this.inventoryBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inventoryBtn.ForeColor = System.Drawing.Color.Gainsboro;
-            this.inventoryBtn.Location = new System.Drawing.Point(11, 313);
-            this.inventoryBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.inventoryBtn.Name = "inventoryBtn";
-            this.inventoryBtn.Size = new System.Drawing.Size(149, 57);
-            this.inventoryBtn.TabIndex = 4;
-            this.inventoryBtn.Text = "Inventory Manage";
-            this.inventoryBtn.UseVisualStyleBackColor = true;
-            this.inventoryBtn.Click += new System.EventHandler(this.inventoryBtn_Click);
+            this.MakeSalesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MakeSalesBtn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.MakeSalesBtn.Location = new System.Drawing.Point(11, 313);
+            this.MakeSalesBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.MakeSalesBtn.Name = "MakeSalesBtn";
+            this.MakeSalesBtn.Size = new System.Drawing.Size(149, 57);
+            this.MakeSalesBtn.TabIndex = 4;
+            this.MakeSalesBtn.Text = "Sales";
+            this.MakeSalesBtn.UseVisualStyleBackColor = true;
+            this.MakeSalesBtn.Click += new System.EventHandler(this.inventoryBtn_Click);
             // 
             // panel3
             // 
@@ -180,7 +180,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel mainpanel;
-        private System.Windows.Forms.Button inventoryBtn;
+        private System.Windows.Forms.Button MakeSalesBtn;
         private System.Windows.Forms.Label invoprotxt;
     }
 }

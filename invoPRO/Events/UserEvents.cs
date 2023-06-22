@@ -25,7 +25,7 @@ namespace invoPRO.Events
                 SqlDataAdapter sda = new SqlDataAdapter(Myquery, Con.connection);
                 DataTable dtable = new DataTable();
                 sda.Fill(dtable);
-
+                Con.closeConnectDB();
 
                 if (dtable.Rows.Count == 1) { return 1; }
 
@@ -39,10 +39,6 @@ namespace invoPRO.Events
                 return 2;
             }
 
-            finally
-            {
-                Con.closeConnectDB();
-            }
         }
 
         public int RegisterUser(User user)

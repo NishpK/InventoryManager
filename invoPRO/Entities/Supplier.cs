@@ -10,22 +10,19 @@ namespace invoPRO
     {
         public string Id { get; set; }
         public string Name { get; set; }
-        public string Product { get; set; }
         public string Address { get; set; }
         public string TelNumber { get; set; }
 
 
-        public Supplier(string id, string name, string product, string address, string telnumber) 
+        public Supplier(string id) { }
+
+        public Supplier(string id, string name, string address, string telnumber) 
         { 
             this.Id = id;
             this.Name= name;
-            this.Product = product;
             this.Address = address;
             this.TelNumber = telnumber;
         
-        }
-        public Supplier(string id) 
-        { 
         }
 
 
