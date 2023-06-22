@@ -53,6 +53,14 @@
     <Compile Include="Entities\Supplier.cs" />
     <Compile Include="Events\SalesEvents.cs" />
     <Compile Include="Events\SupplierEvents.cs" />
+    <Compile Include="Entities\InventoryIn.cs" />
+    <Compile Include="Events\InventoryInEvents.cs" />
+    <Compile Include="Views\InventoryInVeiw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\InventoryInVeiw.Designer.cs">
+      <DependentUpon>InventoryInVeiw.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\AdminView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\DoTransaction.resx">
       <DependentUpon>DoTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InventoryInVeiw.resx">
+      <DependentUpon>InventoryInVeiw.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>

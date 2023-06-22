@@ -43,5 +43,37 @@ namespace invoPRO.Events
 
             return 0;
         }
+
+        public int getInvertoryID()
+        {
+            int maxValue;
+            try
+            {
+                Con.connectDB();
+                string sqlQuery = "SELECT MAX(InventoryInID) FROM InventoryIn";
+                using (SqlCommand command = new SqlCommand(sqlQuery, Con.connection))
+                {
+                    object result = command.ExecuteScalar();
+                    if (result != DBNull.Value)
+                    {
+                        maxValue = Convert.ToInt32(result);
+                    }
+
+                    else
+                    {
+                        maxValue = 0;
+                    }
+                }
+                Con.closeConnectDB();
+                return maxValue;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "An Error has occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return 0;
+        }
     }
 }

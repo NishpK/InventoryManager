@@ -27,10 +27,8 @@ C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.S
 C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.UserView.resources
 C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.Views.WelcomeScreenView.resources
 C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.AdminView.resources
-C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.CustomerView.resources
 C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.SupplierView.resources
 C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.UserView.resources
-C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.Views.InventoryView.resources
 C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.Views.WelcomeScreenView.resources
 C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\bin\Debug\invoPRO.exe.config
 C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\bin\Debug\invoPRO.exe
@@ -48,3 +46,5 @@ C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.cspro
 C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.csproj.CoreCompileInputs.cache
 C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.exe
 C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.pdb
+C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.Views.DoTransaction.resources
+C:\Users\nuwand\Desktop\DonationWeb\invoPRO\obj\Debug\invoPRO.InventoryInVeiw.resources

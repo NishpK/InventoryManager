@@ -72,5 +72,10 @@ namespace invoPRO
         {
             loadform(new DoTransaction());
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            loadform(new InventoryInVeiw());
+        }
     }
 }
