@@ -99,6 +99,7 @@ namespace invoPRO.Views
             {
                 SalesEvents salesEvents = new SalesEvents();
 
+
                 if (salesEvents.deleteSales(transactionID) == 1)
                 {
                     MessageBox.Show("Transaction was deleted succesfully \n Sales page has been reset", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

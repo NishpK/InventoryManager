@@ -84,9 +84,9 @@
             this.label5.Location = new System.Drawing.Point(375, 55);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 16);
+            this.label5.Size = new System.Drawing.Size(90, 16);
             this.label5.TabIndex = 29;
-            this.label5.Text = "Transaction ID";
+            this.label5.Text = "inventory in ID";
             // 
             // transactionIDTxt
             // 
@@ -105,6 +105,7 @@
             this.QtyTxt.Size = new System.Drawing.Size(327, 22);
             this.QtyTxt.TabIndex = 25;
             this.QtyTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.QtyTxt.TextChanged += new System.EventHandler(this.QtyTxt_TextChanged);
             // 
             // label2
             // 
@@ -134,6 +135,7 @@
             this.supplierIDTxt.Size = new System.Drawing.Size(327, 22);
             this.supplierIDTxt.TabIndex = 22;
             this.supplierIDTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.supplierIDTxt.TextChanged += new System.EventHandler(this.supplierIDTxt_TextChanged);
             // 
             // revertBtn
             // 
@@ -186,6 +188,7 @@
             this.itemIdTxt.Size = new System.Drawing.Size(327, 22);
             this.itemIdTxt.TabIndex = 38;
             this.itemIdTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.itemIdTxt.TextChanged += new System.EventHandler(this.itemIdTxt_TextChanged);
             // 
             // InventoryInVeiw
             // 

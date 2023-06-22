@@ -55,16 +55,16 @@
     <Compile Include="Events\SupplierEvents.cs" />
     <Compile Include="Entities\InventoryIn.cs" />
     <Compile Include="Events\InventoryInEvents.cs" />
-    <Compile Include="inventoryInreport.cs">
+    <Compile Include="Views\inventoryInreport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="inventoryInreport.Designer.cs">
+    <Compile Include="Views\inventoryInreport.Designer.cs">
       <DependentUpon>inventoryInreport.cs</DependentUpon>
     </Compile>
-    <Compile Include="transactionReport.cs">
+    <Compile Include="Views\transactionReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="transactionReport.Designer.cs">
+    <Compile Include="Views\transactionReport.Designer.cs">
       <DependentUpon>transactionReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\ItemView.cs">
@@ -120,10 +120,10 @@
     <Compile Include="Views\WelcomeScreenView.Designer.cs">
       <DependentUpon>WelcomeScreenView.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="inventoryInreport.resx">
+    <EmbeddedResource Include="Views\inventoryInreport.resx">
       <DependentUpon>inventoryInreport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="transactionReport.resx">
+    <EmbeddedResource Include="Views\transactionReport.resx">
       <DependentUpon>transactionReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ItemView.resx">
