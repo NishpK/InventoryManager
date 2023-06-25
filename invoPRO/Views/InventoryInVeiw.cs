@@ -60,6 +60,7 @@ namespace invoPRO
         }
         void itemnameload()
         {
+            //loads the item name in to item name tab from itemid entered
             try
             {
                 DBConnection Con = new DBConnection();
@@ -84,44 +85,39 @@ namespace invoPRO
                 
 
             }
-            
-            
            
         }
-
-        /* void itemnameload()
-         {
-             DBConnection Con = new DBConnection();
-             string name=itemnametb.Text;
-             int id=int.Parse(itemidTxt.Text);
-             Con.connectDB();
-             SqlCommand cmd = new SqlCommand("SELECT name FROM Items WHERE ItemID= @ItemID", Con.connection);
-             cmd.Parameters.AddWithValue("@ItemID",id );
-             SqlDataAdapter da = new SqlDataAdapter(cmd);
-             DataTable dt = new DataTable();
-             da.Fill(dt);
-
-         }*/
-
-
 
 
         void suppliertableload()
         {
 
-            
-            DBConnection Con = new DBConnection();
+            //product suppliers load to dataGrid for user
+           
             try
             {
                 // database table load to the tableGV
-                Con.connectDB();
-                String Myquery = "SELECT * FROM SupplierTbl";
-                SqlDataAdapter da = new SqlDataAdapter(Myquery, Con.connection);
-                SqlCommandBuilder builder = new SqlCommandBuilder();
-                var ds = new DataSet();
-                da.Fill(ds);
-                salesDataGrid.DataSource = ds.Tables[0];
-                Con.closeConnectDB();
+                DBConnection Con = new DBConnection();
+                try
+                {
+                    // Database table load to the salesDataGrid
+                    Con.connectDB();
+                    string productName = itemnametb.Text;
+                    string Myquery = "SELECT * FROM SupplierTbl WHERE Sproduct = @Sproduct";
+                    SqlCommand cmd = new SqlCommand(Myquery, Con.connection);
+                    cmd.Parameters.AddWithValue("@Sproduct", productName);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    SqlCommandBuilder builder = new SqlCommandBuilder(da);
+                    var ds = new DataSet();
+                    da.Fill(ds);
+                    salesDataGrid.DataSource = ds.Tables[0];
+                    Con.closeConnectDB();
+                }
+                catch
+                {
+
+                }
+
 
             }
             catch
