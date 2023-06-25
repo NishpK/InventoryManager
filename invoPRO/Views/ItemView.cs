@@ -20,6 +20,7 @@ namespace invoPRO
             InitializeComponent();
             tableload();
             userTypeCheck();
+            instructiontext();
         }
 
         void resetAndReload()
@@ -31,7 +32,11 @@ namespace invoPRO
             qtytb.Text = string.Empty;
             pricetb.Text = string.Empty;
         }
+        void instructiontext()
+        {
+            searchtb.Text = "Enter user firstname";
 
+        }
         public void userTypeCheck()
         {
 
@@ -188,6 +193,11 @@ namespace invoPRO
                 searchtableload();
 
             }
+        }
+
+        private void searchtb_MouseClick(object sender, MouseEventArgs e)
+        {
+            searchtb.Text = string.Empty;
         }
     }
 }

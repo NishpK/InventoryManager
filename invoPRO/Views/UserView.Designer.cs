@@ -41,10 +41,10 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.searchtb = new System.Windows.Forms.TextBox();
+            this.searchbtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.usersgv = new System.Windows.Forms.DataGridView();
-            this.searchbtn = new System.Windows.Forms.Button();
-            this.searchtb = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersgv)).BeginInit();
             this.SuspendLayout();
@@ -207,6 +207,29 @@
             this.panel1.Size = new System.Drawing.Size(1656, 887);
             this.panel1.TabIndex = 0;
             // 
+            // searchtb
+            // 
+            this.searchtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchtb.Location = new System.Drawing.Point(172, 162);
+            this.searchtb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.searchtb.Name = "searchtb";
+            this.searchtb.Size = new System.Drawing.Size(327, 27);
+            this.searchtb.TabIndex = 23;
+            this.searchtb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.searchtb_MouseClick);
+            this.searchtb.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // searchbtn
+            // 
+            this.searchbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchbtn.Location = new System.Drawing.Point(65, 159);
+            this.searchbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.searchbtn.Name = "searchbtn";
+            this.searchbtn.Size = new System.Drawing.Size(90, 32);
+            this.searchbtn.TabIndex = 22;
+            this.searchbtn.Text = "Search";
+            this.searchbtn.UseVisualStyleBackColor = true;
+            this.searchbtn.Click += new System.EventHandler(this.searchbtn_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -239,28 +262,6 @@
             this.usersgv.Size = new System.Drawing.Size(1079, 855);
             this.usersgv.TabIndex = 12;
             this.usersgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.usersgv_CellContentClick);
-            // 
-            // searchbtn
-            // 
-            this.searchbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchbtn.Location = new System.Drawing.Point(65, 159);
-            this.searchbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.searchbtn.Name = "searchbtn";
-            this.searchbtn.Size = new System.Drawing.Size(90, 32);
-            this.searchbtn.TabIndex = 22;
-            this.searchbtn.Text = "Search";
-            this.searchbtn.UseVisualStyleBackColor = true;
-            this.searchbtn.Click += new System.EventHandler(this.searchbtn_Click);
-            // 
-            // searchtb
-            // 
-            this.searchtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchtb.Location = new System.Drawing.Point(172, 162);
-            this.searchtb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.searchtb.Name = "searchtb";
-            this.searchtb.Size = new System.Drawing.Size(327, 27);
-            this.searchtb.TabIndex = 23;
-            this.searchtb.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // UserView
             // 

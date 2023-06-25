@@ -22,12 +22,18 @@ namespace invoPRO
         {
             InitializeComponent();
             tableload();
+            instructiontext();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             AdminView ad = new AdminView();
             ad.Show();
+        }
+        void instructiontext()
+        {
+            searchtb.Text = "Enter user firstname";
+
         }
 
         void resetAndReload()
@@ -238,6 +244,11 @@ namespace invoPRO
             {
                 searchtableload();
             }
+        }
+
+        private void searchtb_MouseClick(object sender, MouseEventArgs e)
+        {
+            searchtb.Text=string.Empty;
         }
     }
 }

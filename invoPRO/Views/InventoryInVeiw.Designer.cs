@@ -55,13 +55,13 @@
             this.salesDataGrid.AllowUserToDeleteRows = false;
             this.salesDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.salesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.salesDataGrid.Location = new System.Drawing.Point(462, 538);
+            this.salesDataGrid.Location = new System.Drawing.Point(462, 618);
             this.salesDataGrid.Margin = new System.Windows.Forms.Padding(4);
             this.salesDataGrid.Name = "salesDataGrid";
             this.salesDataGrid.ReadOnly = true;
             this.salesDataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.salesDataGrid.RowHeadersWidth = 51;
-            this.salesDataGrid.Size = new System.Drawing.Size(1159, 321);
+            this.salesDataGrid.Size = new System.Drawing.Size(1159, 241);
             this.salesDataGrid.TabIndex = 37;
             // 
             // subTransactionTxt
@@ -110,6 +110,7 @@
             this.QtyTxt.Size = new System.Drawing.Size(327, 22);
             this.QtyTxt.TabIndex = 25;
             this.QtyTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.QtyTxt.MouseClick += new System.Windows.Forms.MouseEventHandler(this.QtyTxt_MouseClick);
             this.QtyTxt.TextChanged += new System.EventHandler(this.QtyTxt_TextChanged);
             // 
             // label2
@@ -198,6 +199,7 @@
             this.itemidTxt.MouseClick += new System.Windows.Forms.MouseEventHandler(this.itemIdTxt_MouseClick);
             this.itemidTxt.TextChanged += new System.EventHandler(this.itemIdTxt_TextChanged);
             this.itemidTxt.Enter += new System.EventHandler(this.itemidTxt_Enter);
+            this.itemidTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.itemidTxt_KeyPress);
             // 
             // label3
             // 
@@ -217,6 +219,7 @@
             this.itemnametb.Size = new System.Drawing.Size(327, 22);
             this.itemnametb.TabIndex = 40;
             this.itemnametb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.itemnametb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.itemnametb_MouseClick);
             // 
             // dataGridView1
             // 
@@ -230,7 +233,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1159, 356);
+            this.dataGridView1.Size = new System.Drawing.Size(1159, 413);
             this.dataGridView1.TabIndex = 42;
             // 
             // InventoryInVeiw

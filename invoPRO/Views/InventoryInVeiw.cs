@@ -252,8 +252,7 @@ namespace invoPRO
         }
         private void QtyTxt_TextChanged(object sender, EventArgs e)
         {
-            //load product and quantity to the table
-            //producttableload();
+           
         }
 
         private void itemIdTxt_MouseClick(object sender, MouseEventArgs e)
@@ -277,7 +276,24 @@ namespace invoPRO
 
         private void itemidTxt_Enter(object sender, EventArgs e)
         {
+           
+        }
+
+        private void itemidTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
             itemnameload();
+        }
+
+        private void QtyTxt_MouseClick(object sender, MouseEventArgs e)
+        {
+            //load product and quantity to the table
+            producttableload();
+        }
+
+        private void itemnametb_MouseClick(object sender, MouseEventArgs e)
+        {//incase user deosnt press any key and clicks
+            itemnameload();
+
         }
     }
 }

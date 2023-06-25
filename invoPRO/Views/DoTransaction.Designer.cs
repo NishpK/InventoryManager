@@ -47,7 +47,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.salesDataGrid = new System.Windows.Forms.DataGridView();
+            this.infoview = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.salesDataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.infoview)).BeginInit();
             this.SuspendLayout();
             // 
             // addItem
@@ -91,6 +93,9 @@
             this.itemIDTxt.Size = new System.Drawing.Size(327, 22);
             this.itemIDTxt.TabIndex = 3;
             this.itemIDTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.itemIDTxt.MouseClick += new System.Windows.Forms.MouseEventHandler(this.itemIDTxt_MouseClick);
+            this.itemIDTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.itemIDTxt_KeyPress);
+            this.itemIDTxt.MouseLeave += new System.EventHandler(this.itemIDTxt_MouseLeave);
             // 
             // label1
             // 
@@ -105,7 +110,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(77, 262);
+            this.label2.Location = new System.Drawing.Point(77, 324);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 16);
@@ -114,7 +119,7 @@
             // 
             // QtyTxt
             // 
-            this.QtyTxt.Location = new System.Drawing.Point(77, 282);
+            this.QtyTxt.Location = new System.Drawing.Point(77, 344);
             this.QtyTxt.Margin = new System.Windows.Forms.Padding(4);
             this.QtyTxt.Name = "QtyTxt";
             this.QtyTxt.Size = new System.Drawing.Size(327, 22);
@@ -123,17 +128,18 @@
             // 
             // PriceTxt
             // 
-            this.PriceTxt.Location = new System.Drawing.Point(77, 344);
+            this.PriceTxt.Location = new System.Drawing.Point(76, 287);
             this.PriceTxt.Margin = new System.Windows.Forms.Padding(4);
             this.PriceTxt.Name = "PriceTxt";
             this.PriceTxt.Size = new System.Drawing.Size(327, 22);
             this.PriceTxt.TabIndex = 8;
             this.PriceTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.PriceTxt.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PriceTxt_MouseClick);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(77, 325);
+            this.label3.Location = new System.Drawing.Point(76, 268);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 16);
@@ -234,6 +240,7 @@
             // 
             this.salesDataGrid.AllowUserToAddRows = false;
             this.salesDataGrid.AllowUserToDeleteRows = false;
+            this.salesDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.salesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.salesDataGrid.Location = new System.Drawing.Point(488, 108);
             this.salesDataGrid.Margin = new System.Windows.Forms.Padding(4);
@@ -241,8 +248,23 @@
             this.salesDataGrid.ReadOnly = true;
             this.salesDataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.salesDataGrid.RowHeadersWidth = 51;
-            this.salesDataGrid.Size = new System.Drawing.Size(981, 549);
+            this.salesDataGrid.Size = new System.Drawing.Size(1096, 398);
             this.salesDataGrid.TabIndex = 18;
+            // 
+            // infoview
+            // 
+            this.infoview.AllowUserToAddRows = false;
+            this.infoview.AllowUserToDeleteRows = false;
+            this.infoview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.infoview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.infoview.Location = new System.Drawing.Point(488, 557);
+            this.infoview.Margin = new System.Windows.Forms.Padding(4);
+            this.infoview.Name = "infoview";
+            this.infoview.ReadOnly = true;
+            this.infoview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.infoview.RowHeadersWidth = 51;
+            this.infoview.Size = new System.Drawing.Size(1096, 312);
+            this.infoview.TabIndex = 19;
             // 
             // DoTransaction
             // 
@@ -250,6 +272,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1656, 887);
             this.ControlBox = false;
+            this.Controls.Add(this.infoview);
             this.Controls.Add(this.salesDataGrid);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.discountTxt);
@@ -274,6 +297,7 @@
             this.Name = "DoTransaction";
             this.Text = "DoTransaction";
             ((System.ComponentModel.ISupportInitialize)(this.salesDataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.infoview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,5 +324,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView salesDataGrid;
+        private System.Windows.Forms.DataGridView infoview;
     }
 }

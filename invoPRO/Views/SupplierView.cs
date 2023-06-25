@@ -22,6 +22,15 @@ namespace invoPRO
         {
             InitializeComponent();
             tableload();
+            instructiontext();
+
+
+        }
+
+        void instructiontext()
+        {
+            search.Text = "Enter supply item";
+
         }
 
         void clearTxtBoxes()
@@ -197,6 +206,12 @@ namespace invoPRO
         {
             clearTxtBoxes();
 
+        }
+
+        private void search_MouseClick(object sender, MouseEventArgs e)
+        {
+            
+            search.Text = string.Empty;
         }
     }
 }

@@ -244,6 +244,7 @@
             this.searchtb.Name = "searchtb";
             this.searchtb.Size = new System.Drawing.Size(327, 27);
             this.searchtb.TabIndex = 39;
+            this.searchtb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.searchtb_MouseClick);
             // 
             // ItemView
             // 

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -37,6 +38,68 @@ namespace invoPRO.Views
         void fullclear()
         {
             Close();
+        }
+        void itemtableload()
+        {
+            DBConnection Con = new DBConnection();
+            try
+            {
+                // database table load to the tableGV
+                Con.connectDB();
+                String Myquery = "SELECT * FROM Items";
+                SqlDataAdapter da = new SqlDataAdapter(Myquery, Con.connection);
+                SqlCommandBuilder builder = new SqlCommandBuilder();
+                var ds = new DataSet();
+                da.Fill(ds);
+                infoview.DataSource = ds.Tables[0];
+                Con.closeConnectDB();
+
+            }
+
+            catch
+            {
+
+            }
+        }
+
+        void loadprice()
+        {
+            DBConnection Con = new DBConnection();
+            try
+            {
+
+                int id = int.Parse(itemIDTxt.Text);
+                try
+                {
+                    
+                    
+                    Con.connectDB();
+                    SqlCommand cmd = new SqlCommand("SELECT unitPrice FROM Items WHERE ItemID = @ItemID", Con.connection);
+                    cmd.Parameters.AddWithValue("@ItemID", id);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    
+
+                    if (dt.Rows.Count > 0)
+                    {
+                        string itemName = dt.Rows[0]["unitPrice"].ToString();
+                        PriceTxt.Text = itemName;
+                    }
+
+                }
+                catch (System.FormatException)
+                {
+
+
+                }
+
+            }
+
+            catch
+            {
+
+            }
         }
 
         void getNewTransactionID()
@@ -144,6 +207,29 @@ namespace invoPRO.Views
         private void subTransactionTxt_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void itemIDTxt_MouseClick(object sender, MouseEventArgs e)
+        {
+            //item id grid 
+            itemtableload();
+        }
+
+        private void itemIDTxt_MouseLeave(object sender, EventArgs e)
+        { 
+        
+
+        }
+
+        private void itemIDTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            loadprice();
+        }
+
+        private void PriceTxt_MouseClick(object sender, MouseEventArgs e)
+        {
+            //backup way
+            loadprice();
         }
     }
 }
