@@ -44,7 +44,9 @@
             this.itemidTxt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.itemnametb = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.salesDataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // salesDataGrid
@@ -53,13 +55,13 @@
             this.salesDataGrid.AllowUserToDeleteRows = false;
             this.salesDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.salesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.salesDataGrid.Location = new System.Drawing.Point(472, 111);
+            this.salesDataGrid.Location = new System.Drawing.Point(462, 538);
             this.salesDataGrid.Margin = new System.Windows.Forms.Padding(4);
             this.salesDataGrid.Name = "salesDataGrid";
             this.salesDataGrid.ReadOnly = true;
             this.salesDataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.salesDataGrid.RowHeadersWidth = 51;
-            this.salesDataGrid.Size = new System.Drawing.Size(1100, 648);
+            this.salesDataGrid.Size = new System.Drawing.Size(1159, 321);
             this.salesDataGrid.TabIndex = 37;
             // 
             // subTransactionTxt
@@ -216,11 +218,27 @@
             this.itemnametb.TabIndex = 40;
             this.itemnametb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(462, 121);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(1159, 356);
+            this.dataGridView1.TabIndex = 42;
+            // 
             // InventoryInVeiw
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1656, 887);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.itemnametb);
             this.Controls.Add(this.label8);
@@ -241,6 +259,7 @@
             this.Name = "InventoryInVeiw";
             this.Text = "InventoryIn";
             ((System.ComponentModel.ISupportInitialize)(this.salesDataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,5 +283,6 @@
         private System.Windows.Forms.TextBox itemidTxt;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox itemnametb;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
