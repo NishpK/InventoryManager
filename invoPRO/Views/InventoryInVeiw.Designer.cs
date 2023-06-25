@@ -41,7 +41,9 @@
             this.ConfirmTransaction = new System.Windows.Forms.Button();
             this.addItem = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.itemIdTxt = new System.Windows.Forms.TextBox();
+            this.itemidTxt = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.itemnametb = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.salesDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,20 +51,21 @@
             // 
             this.salesDataGrid.AllowUserToAddRows = false;
             this.salesDataGrid.AllowUserToDeleteRows = false;
+            this.salesDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.salesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.salesDataGrid.Location = new System.Drawing.Point(379, 90);
+            this.salesDataGrid.Location = new System.Drawing.Point(472, 111);
             this.salesDataGrid.Margin = new System.Windows.Forms.Padding(4);
             this.salesDataGrid.Name = "salesDataGrid";
             this.salesDataGrid.ReadOnly = true;
             this.salesDataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.salesDataGrid.RowHeadersWidth = 51;
-            this.salesDataGrid.Size = new System.Drawing.Size(761, 430);
+            this.salesDataGrid.Size = new System.Drawing.Size(1100, 648);
             this.salesDataGrid.TabIndex = 37;
             // 
             // subTransactionTxt
             // 
             this.subTransactionTxt.Enabled = false;
-            this.subTransactionTxt.Location = new System.Drawing.Point(734, 51);
+            this.subTransactionTxt.Location = new System.Drawing.Point(1189, 54);
             this.subTransactionTxt.Margin = new System.Windows.Forms.Padding(4);
             this.subTransactionTxt.Name = "subTransactionTxt";
             this.subTransactionTxt.Size = new System.Drawing.Size(155, 22);
@@ -71,7 +74,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(667, 55);
+            this.label4.Location = new System.Drawing.Point(1122, 58);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 16);
@@ -81,7 +84,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(375, 55);
+            this.label5.Location = new System.Drawing.Point(624, 62);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 16);
@@ -91,7 +94,7 @@
             // transactionIDTxt
             // 
             this.transactionIDTxt.Enabled = false;
-            this.transactionIDTxt.Location = new System.Drawing.Point(486, 51);
+            this.transactionIDTxt.Location = new System.Drawing.Point(735, 58);
             this.transactionIDTxt.Margin = new System.Windows.Forms.Padding(4);
             this.transactionIDTxt.Name = "transactionIDTxt";
             this.transactionIDTxt.Size = new System.Drawing.Size(155, 22);
@@ -99,7 +102,7 @@
             // 
             // QtyTxt
             // 
-            this.QtyTxt.Location = new System.Drawing.Point(17, 253);
+            this.QtyTxt.Location = new System.Drawing.Point(68, 384);
             this.QtyTxt.Margin = new System.Windows.Forms.Padding(4);
             this.QtyTxt.Name = "QtyTxt";
             this.QtyTxt.Size = new System.Drawing.Size(327, 22);
@@ -110,7 +113,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 233);
+            this.label2.Location = new System.Drawing.Point(68, 364);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 16);
@@ -120,7 +123,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 170);
+            this.label1.Location = new System.Drawing.Point(68, 301);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 16);
@@ -129,17 +132,18 @@
             // 
             // supplierIDTxt
             // 
-            this.supplierIDTxt.Location = new System.Drawing.Point(17, 194);
+            this.supplierIDTxt.Location = new System.Drawing.Point(68, 325);
             this.supplierIDTxt.Margin = new System.Windows.Forms.Padding(4);
             this.supplierIDTxt.Name = "supplierIDTxt";
             this.supplierIDTxt.Size = new System.Drawing.Size(327, 22);
             this.supplierIDTxt.TabIndex = 22;
             this.supplierIDTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.supplierIDTxt.MouseClick += new System.Windows.Forms.MouseEventHandler(this.supplierIDTxt_MouseClick);
             this.supplierIDTxt.TextChanged += new System.EventHandler(this.supplierIDTxt_TextChanged);
             // 
             // revertBtn
             // 
-            this.revertBtn.Location = new System.Drawing.Point(188, 318);
+            this.revertBtn.Location = new System.Drawing.Point(239, 449);
             this.revertBtn.Margin = new System.Windows.Forms.Padding(4);
             this.revertBtn.Name = "revertBtn";
             this.revertBtn.Size = new System.Drawing.Size(156, 28);
@@ -150,7 +154,7 @@
             // 
             // ConfirmTransaction
             // 
-            this.ConfirmTransaction.Location = new System.Drawing.Point(17, 393);
+            this.ConfirmTransaction.Location = new System.Drawing.Point(68, 524);
             this.ConfirmTransaction.Margin = new System.Windows.Forms.Padding(4);
             this.ConfirmTransaction.Name = "ConfirmTransaction";
             this.ConfirmTransaction.Size = new System.Drawing.Size(331, 28);
@@ -161,7 +165,7 @@
             // 
             // addItem
             // 
-            this.addItem.Location = new System.Drawing.Point(13, 318);
+            this.addItem.Location = new System.Drawing.Point(64, 449);
             this.addItem.Margin = new System.Windows.Forms.Padding(4);
             this.addItem.Name = "addItem";
             this.addItem.Size = new System.Drawing.Size(156, 28);
@@ -173,30 +177,54 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(17, 111);
+            this.label8.Location = new System.Drawing.Point(72, 151);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(48, 16);
             this.label8.TabIndex = 39;
             this.label8.Text = "Item ID";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // itemIdTxt
+            // itemidTxt
             // 
-            this.itemIdTxt.Location = new System.Drawing.Point(17, 135);
-            this.itemIdTxt.Margin = new System.Windows.Forms.Padding(4);
-            this.itemIdTxt.Name = "itemIdTxt";
-            this.itemIdTxt.Size = new System.Drawing.Size(327, 22);
-            this.itemIdTxt.TabIndex = 38;
-            this.itemIdTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.itemIdTxt.TextChanged += new System.EventHandler(this.itemIdTxt_TextChanged);
+            this.itemidTxt.Location = new System.Drawing.Point(72, 175);
+            this.itemidTxt.Margin = new System.Windows.Forms.Padding(4);
+            this.itemidTxt.Name = "itemidTxt";
+            this.itemidTxt.Size = new System.Drawing.Size(327, 22);
+            this.itemidTxt.TabIndex = 38;
+            this.itemidTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.itemidTxt.MouseClick += new System.Windows.Forms.MouseEventHandler(this.itemIdTxt_MouseClick);
+            this.itemidTxt.TextChanged += new System.EventHandler(this.itemIdTxt_TextChanged);
+            this.itemidTxt.Enter += new System.EventHandler(this.itemidTxt_Enter);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(68, 224);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 16);
+            this.label3.TabIndex = 41;
+            this.label3.Text = "Item name";
+            // 
+            // itemnametb
+            // 
+            this.itemnametb.Location = new System.Drawing.Point(68, 248);
+            this.itemnametb.Margin = new System.Windows.Forms.Padding(4);
+            this.itemnametb.Name = "itemnametb";
+            this.itemnametb.Size = new System.Drawing.Size(327, 22);
+            this.itemnametb.TabIndex = 40;
+            this.itemnametb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // InventoryInVeiw
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1162, 597);
+            this.ClientSize = new System.Drawing.Size(1656, 887);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.itemnametb);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.itemIdTxt);
+            this.Controls.Add(this.itemidTxt);
             this.Controls.Add(this.salesDataGrid);
             this.Controls.Add(this.subTransactionTxt);
             this.Controls.Add(this.label4);
@@ -233,6 +261,8 @@
         private System.Windows.Forms.Button ConfirmTransaction;
         private System.Windows.Forms.Button addItem;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox itemIdTxt;
+        private System.Windows.Forms.TextBox itemidTxt;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox itemnametb;
     }
 }

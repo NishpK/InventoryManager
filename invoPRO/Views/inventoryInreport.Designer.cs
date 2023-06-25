@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.usergv = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.usergv)).BeginInit();
@@ -46,12 +47,15 @@
             // 
             // usergv
             // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.usergv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.usergv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.usergv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.usergv.Location = new System.Drawing.Point(12, 93);
             this.usergv.Name = "usergv";
             this.usergv.RowHeadersWidth = 51;
             this.usergv.RowTemplate.Height = 24;
-            this.usergv.Size = new System.Drawing.Size(1331, 657);
+            this.usergv.Size = new System.Drawing.Size(1632, 782);
             this.usergv.TabIndex = 2;
             this.usergv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.usergv_CellContentClick);
             // 
@@ -59,7 +63,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1355, 762);
+            this.ClientSize = new System.Drawing.Size(1656, 887);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.usergv);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

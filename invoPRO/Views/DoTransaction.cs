@@ -135,5 +135,15 @@ namespace invoPRO.Views
         {
 
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void subTransactionTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

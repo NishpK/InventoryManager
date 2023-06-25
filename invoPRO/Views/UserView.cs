@@ -39,7 +39,26 @@ namespace invoPRO
             passwordtb.Text = string.Empty;
         }
 
-            void tableload()
+        void searchtableload()
+        {
+            string userid = searchtb.Text;
+            //clear datagrid
+            usersgv.DataSource = null;
+            usersgv.Rows.Clear();
+            usersgv.Columns.Clear();
+            DBConnection Con = new DBConnection();
+            Con.connectDB();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM UserTbl WHERE FirstName= @FirstName", Con.connection);
+            cmd.Parameters.AddWithValue("@FirstName",userid);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            usersgv.DataSource = dt;
+
+            Con.closeConnectDB();
+        }
+
+        void tableload()
         {
             try
             {
@@ -199,6 +218,26 @@ namespace invoPRO
         private void fnametb_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void searchbtn_Click(object sender, EventArgs e)
+        {
+            string userid= searchtb.Text;
+
+            if (userid == "")
+            {
+                MessageBox.Show("enter user id");
+            }
+
+            else
+            {
+                searchtableload();
+            }
         }
     }
 }

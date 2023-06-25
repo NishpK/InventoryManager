@@ -23,7 +23,7 @@ namespace invoPRO
 
         void halfClear()
         {
-            itemIdTxt.Text = string.Empty;
+            itemidTxt.Text = string.Empty;
             supplierIDTxt.Text = string.Empty;
             QtyTxt.Text = string.Empty;
 
@@ -58,9 +58,58 @@ namespace invoPRO
 
             }
         }
+        void itemnameload()
+        {
+            try
+            {
+                DBConnection Con = new DBConnection();
+                string name = itemnametb.Text;
+                int id = int.Parse(itemidTxt.Text);
+                Con.connectDB();
+                SqlCommand cmd = new SqlCommand("SELECT name FROM Items WHERE ItemID = @ItemID", Con.connection);
+                cmd.Parameters.AddWithValue("@ItemID", id);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    string itemName = dt.Rows[0]["name"].ToString();
+                    itemnametb.Text = itemName;
+                }
+
+            }
+            catch(System.FormatException)
+            {
+                
+
+            }
+            
+            
+           
+        }
+
+        /* void itemnameload()
+         {
+             DBConnection Con = new DBConnection();
+             string name=itemnametb.Text;
+             int id=int.Parse(itemidTxt.Text);
+             Con.connectDB();
+             SqlCommand cmd = new SqlCommand("SELECT name FROM Items WHERE ItemID= @ItemID", Con.connection);
+             cmd.Parameters.AddWithValue("@ItemID",id );
+             SqlDataAdapter da = new SqlDataAdapter(cmd);
+             DataTable dt = new DataTable();
+             da.Fill(dt);
+
+         }*/
+
+
+
 
         void suppliertableload()
         {
+
+            
             DBConnection Con = new DBConnection();
             try
             {
@@ -85,7 +134,7 @@ namespace invoPRO
         void producttableload()
         {
 
-            int id = int.Parse(itemIdTxt.Text);
+            int id = int.Parse(itemidTxt.Text);
             DBConnection Con = new DBConnection();
             try
             {
@@ -105,6 +154,7 @@ namespace invoPRO
 
             }
         }
+
 
         
 
@@ -128,7 +178,7 @@ namespace invoPRO
         {
             subTransactionTxt.Text = subTransaction.ToString();
 
-            int itemID = int.Parse(itemIdTxt.Text);
+            int itemID = int.Parse(itemidTxt.Text);
             int supplierID = int.Parse(supplierIDTxt.Text);
             int qty = int.Parse(QtyTxt.Text);
            
@@ -196,20 +246,42 @@ namespace invoPRO
 
         private void itemIdTxt_TextChanged(object sender, EventArgs e)
         {
-            //load all item names and item numbers to table
-            itemtableload();
+            
+            
         }
 
         private void supplierIDTxt_TextChanged(object sender, EventArgs e)
         {
-            //load the supply details to the table once typed one letter
-            suppliertableload();
-        }
 
+        }
         private void QtyTxt_TextChanged(object sender, EventArgs e)
         {
             //load product and quantity to the table
             //producttableload();
+        }
+
+        private void itemIdTxt_MouseClick(object sender, MouseEventArgs e)
+        {
+            //load all item names and item numbers to table
+            itemtableload();
+        }
+
+        private void supplierIDTxt_MouseClick(object sender, MouseEventArgs e)
+        {
+                //load the supply details to the table once typed one letter
+                suppliertableload();
+            
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void itemidTxt_Enter(object sender, EventArgs e)
+        {
+            itemnameload();
         }
     }
 }

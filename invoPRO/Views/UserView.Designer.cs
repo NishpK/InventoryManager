@@ -43,6 +43,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.usersgv = new System.Windows.Forms.DataGridView();
+            this.searchbtn = new System.Windows.Forms.Button();
+            this.searchtb = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersgv)).BeginInit();
             this.SuspendLayout();
@@ -182,6 +184,8 @@
             // panel1
             // 
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.searchtb);
+            this.panel1.Controls.Add(this.searchbtn);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.usersgv);
@@ -236,6 +240,28 @@
             this.usersgv.TabIndex = 12;
             this.usersgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.usersgv_CellContentClick);
             // 
+            // searchbtn
+            // 
+            this.searchbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchbtn.Location = new System.Drawing.Point(65, 159);
+            this.searchbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.searchbtn.Name = "searchbtn";
+            this.searchbtn.Size = new System.Drawing.Size(90, 32);
+            this.searchbtn.TabIndex = 22;
+            this.searchbtn.Text = "Search";
+            this.searchbtn.UseVisualStyleBackColor = true;
+            this.searchbtn.Click += new System.EventHandler(this.searchbtn_Click);
+            // 
+            // searchtb
+            // 
+            this.searchtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchtb.Location = new System.Drawing.Point(172, 162);
+            this.searchtb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.searchtb.Name = "searchtb";
+            this.searchtb.Size = new System.Drawing.Size(327, 27);
+            this.searchtb.TabIndex = 23;
+            this.searchtb.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // UserView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -271,5 +297,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView usersgv;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox searchtb;
+        private System.Windows.Forms.Button searchbtn;
     }
 }

@@ -70,6 +70,24 @@ namespace invoPRO
 
             }
         }
+        void searchtableload()
+        {
+            string pname = searchtb.Text;
+            //clear datagrid
+            usersgv.DataSource = null;
+            usersgv.Rows.Clear();
+            usersgv.Columns.Clear();
+            DBConnection Con = new DBConnection();
+            Con.connectDB();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Items WHERE name= @name", Con.connection);
+            cmd.Parameters.AddWithValue("@name", pname);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            usersgv.DataSource = dt;
+
+            Con.closeConnectDB();
+        }
         //add button
         private void AddBtn_Click(object sender, EventArgs e)
         {
@@ -156,6 +174,20 @@ namespace invoPRO
             brandtb.Text = usersgv.SelectedRows[0].Cells[2].Value.ToString();
             qtytb.Text = usersgv.SelectedRows[0].Cells[3].Value.ToString();
             pricetb.Text = usersgv.SelectedRows[0].Cells[3].Value.ToString();
+        }
+
+        private void searchbtn_Click(object sender, EventArgs e)
+        {
+            string pname = searchtb.Text;
+            if (pname == "")
+            {
+                MessageBox.Show("enter item name");
+            }
+            else
+            {
+                searchtableload();
+
+            }
         }
     }
 }

@@ -57,6 +57,25 @@ namespace invoPRO
             }
         }
 
+        void searchtableload()
+        {
+            string product = search.Text;
+            //clear datagrid
+            usersgv.DataSource = null;
+            usersgv.Rows.Clear();
+            usersgv.Columns.Clear();
+            DBConnection Con = new DBConnection();
+            Con.connectDB();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM SupplierTbl WHERE Sproduct= @Sproduct", Con.connection);
+            cmd.Parameters.AddWithValue("@Sproduct", product);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            usersgv.DataSource = dt;
+
+            Con.closeConnectDB();
+        }
+
         void Guselect()
         {
             sid.Text = usersgv.SelectedRows[0].Cells[0].Value.ToString();
@@ -77,10 +96,11 @@ namespace invoPRO
 
             string id = sid.Text;
             string name = sname.Text;
+            string item= pname.Text;
             string address = saddress.Text;
             string telnumber = stel.Text;
 
-            Supplier supplier= new Supplier(id,name, address, telnumber);
+            Supplier supplier= new Supplier(id,name,item,address, telnumber);
             SupplierEvents supplierEvents = new SupplierEvents();
 
             if (supplierEvents.RegisterSupplier(supplier)==1)
@@ -97,11 +117,11 @@ namespace invoPRO
 
             string id=sid.Text;
             string name=sname.Text;
-
+            string item = pname.Text;
             string address=saddress.Text;
             string telnumber=stel.Text;
 
-            Supplier supplier = new Supplier(id ,name,address,telnumber);
+            Supplier supplier = new Supplier(id ,name,item,address,telnumber);
             SupplierEvents supplierEvents = new SupplierEvents();
             
 
@@ -128,11 +148,12 @@ namespace invoPRO
         {
             string id = sid.Text;
             string name = sname.Text;
+            string item = pname.Text;
             string address = saddress.Text;
             string telnumber = stel.Text;
 
             
-            Supplier supplier = new Supplier(id, name, address, telnumber);
+            Supplier supplier = new Supplier(id, name,item, address, telnumber);
             SupplierEvents supplierEvents = new SupplierEvents();
 
             if (sid.Text == "")
@@ -165,32 +186,11 @@ namespace invoPRO
                 MessageBox.Show("Enter product name");
 
             }
-            //else
-            //{
-            //    try
-            //    {
-            //        Con.Open();
-          
+            else
+            {
+                searchtableload();
 
-
-
-            //        SqlCommand cmd = new SqlCommand("SELECT * FROM SupplierTbl WHERE Sproduct=@sprod", Con);
-            //        cmd.Parameters.AddWithValue("@sprod", search.Text);
-            //        cmd.ExecuteNonQuery();
-
-            //        SqlCommandBuilder builder = new SqlCommandBuilder();
-            //        var ds = new DataSet();
-            //        cmd.Fill(ds);
-            //        usersgv.DataSource = ds.Tables[0];
-            //        Con.Close();
-
-
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show("An error occurred: " + ex.Message);
-            //    }
-            //}
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
