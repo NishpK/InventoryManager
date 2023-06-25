@@ -106,6 +106,29 @@ namespace invoPRO.Events
             }
         }
 
+
+        public int itemInUpdate (Items item)
+        {
+            try
+            {
+                Con.connectDB();
+                SqlCommand cmd = new SqlCommand("UPDATE Items SET qty = qty + @qty where itemID = @id", Con.connection);
+                cmd.Parameters.AddWithValue("@qty", item.qty);
+                cmd.Parameters.AddWithValue("@id", item.itemID);
+                cmd.ExecuteNonQuery();
+                Con.closeConnectDB();
+                return 1;
+            }
+
+            catch (Exception ex)
+            {
+                string message = "An error occured : " + ex.ToString();
+                MessageBox.Show(message);
+                return 0;
+            }
+
+        }
+
     }
     
 }

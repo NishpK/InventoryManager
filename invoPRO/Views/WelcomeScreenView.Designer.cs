@@ -50,6 +50,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "WelcomeScreenView";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "WelcomeScreenView";
             this.ResumeLayout(false);
             this.PerformLayout();

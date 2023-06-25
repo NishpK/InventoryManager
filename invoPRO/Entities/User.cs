@@ -12,6 +12,8 @@ namespace invoPRO.Entities
         public string LastName { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
+
+        public bool IsAdmin { get; set; }
       
 
         public User(string firstName, string lastName, string username, string password)
@@ -32,5 +34,7 @@ namespace invoPRO.Entities
             this.Username = username;
             this.Password = password;
         }
+
+
     }
 }

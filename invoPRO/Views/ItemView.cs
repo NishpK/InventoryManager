@@ -19,6 +19,7 @@ namespace invoPRO
         {
             InitializeComponent();
             tableload();
+            userTypeCheck();
         }
 
         void resetAndReload()
@@ -29,6 +30,23 @@ namespace invoPRO
             brandtb.Text = string.Empty;
             qtytb.Text = string.Empty;
             pricetb.Text = string.Empty;
+        }
+
+        public void userTypeCheck()
+        {
+
+            bool isadmin = adminCheck.isAdmin;
+
+
+            if (isadmin == false)
+            {
+
+                AddBtn.Enabled = false;
+                button2.Enabled = false;
+                button3.Enabled = false;
+                button4.Enabled = false;
+
+            }
         }
 
         void tableload()
@@ -88,11 +106,13 @@ namespace invoPRO
             }
 
         }
+
         //clear
         private void button4_Click(object sender, EventArgs e)
         {
             resetAndReload();
         }
+
         //delete
         private void button3_Click(object sender, EventArgs e)
         {

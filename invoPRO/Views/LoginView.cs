@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using invoPRO.Events;
 using invoPRO.Entities;
+using System.Security.Cryptography.X509Certificates;
 
 namespace invoPRO
 {
@@ -18,10 +19,26 @@ namespace invoPRO
         public Form1()
         {
             InitializeComponent();
+            FormClosing += Form1_FormClosing;
         }
-        //database connect
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=inventoryDB.mdf;Integrated Security=True;Connect Timeout=30");
 
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    Application.Exit();
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+            }
+        }
+
+           
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -54,17 +71,18 @@ namespace invoPRO
             string username = unametb.Text;
             string password= passwordtb.Text;
 
-
             if (username == "admin" && password == "123")
             {
+                adminCheck.isAdmin = true;
                 AdminView home = new AdminView();
                 home.Show();
                 this.Hide();
-                MessageBox.Show("Welcome Admin");
+
             }
 
             else
             {
+                adminCheck.isAdmin = false;
                 username = unametb.Text;
                 password = passwordtb.Text;
 
@@ -74,7 +92,7 @@ namespace invoPRO
                     AdminView home = new AdminView();
                     home.Show();
                     this.Hide();
-                    MessageBox.Show("Welcome User");
+                    MessageBox.Show("Welcome " + username + "!", "Hello", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
                 else
@@ -83,7 +101,7 @@ namespace invoPRO
                 }
 
             }
-
         }
+
     }
 }

@@ -76,4 +76,10 @@ namespace invoPRO.Events
             return 0;
         }
     }
+
+
+    public static class adminCheck
+    {
+        public static bool isAdmin { get; set; } 
+    }
 }

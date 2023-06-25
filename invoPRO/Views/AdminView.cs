@@ -1,4 +1,6 @@
-﻿using invoPRO.Views;
+﻿using invoPRO.Entities;
+using invoPRO.Events;
+using invoPRO.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,8 +18,27 @@ namespace invoPRO
         public AdminView()
         {
             InitializeComponent();
-            loadform(new WelcomeScreenView());
+            userTypeCheck();
+            FormClosing += AdminView_FormClosing;
         }
+
+        private void AdminView_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    Application.Exit();
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+            }
+        }
+
 
         public void loadform(object form)
         {
@@ -29,30 +50,40 @@ namespace invoPRO
             this.mainpanel.Controls.Add(f);
             this.mainpanel.Tag = f;
             f.Show();
+        }
 
+        public void userTypeCheck()
+        {
 
+            bool isadmin = adminCheck.isAdmin;
 
+            if(isadmin == true)
+            {
+                MessageBox.Show("You Have logged in as the adminstrator!", 
+                    "Admin Dashboard", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            else
+            {
+                button1.Visible = false ;
+                button3.Visible = false ;
+                managementLbl.Visible = false ;
+            }
         }
 
 
         private void button1_Click(object sender, EventArgs e)
         {
             loadform(new UserView());
-
-
         }
 
 
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
+
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            // exit button
-            Application.Exit();
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -62,7 +93,7 @@ namespace invoPRO
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //supplieer manage button
+
             loadform(new SupplierView());
         }
 
@@ -84,6 +115,18 @@ namespace invoPRO
         private void button6_Click(object sender, EventArgs e)
         {
             loadform(new inventoryInreport());
+        }
+
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            string message = "Do you want to logout?";
+            var Dialog = MessageBox.Show(message, "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (Dialog == DialogResult.Yes)
+            {
+                adminCheck.isAdmin = false;
+                Application.Restart();
+            }
         }
     }
 }

@@ -53,7 +53,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(178, 139);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 283);
             this.panel1.TabIndex = 0;
@@ -63,7 +63,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.ForeColor = System.Drawing.Color.Gainsboro;
             this.checkBox1.Location = new System.Drawing.Point(120, 189);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(102, 17);
             this.checkBox1.TabIndex = 8;
@@ -75,7 +75,7 @@
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9.2F);
             this.button2.Location = new System.Drawing.Point(174, 232);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(66, 28);
             this.button2.TabIndex = 7;
@@ -87,7 +87,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(69, 232);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(66, 28);
             this.button1.TabIndex = 6;
@@ -98,7 +98,7 @@
             // passwordtb
             // 
             this.passwordtb.Location = new System.Drawing.Point(120, 166);
-            this.passwordtb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.passwordtb.Margin = new System.Windows.Forms.Padding(2);
             this.passwordtb.Name = "passwordtb";
             this.passwordtb.Size = new System.Drawing.Size(131, 20);
             this.passwordtb.TabIndex = 5;
@@ -107,7 +107,7 @@
             // unametb
             // 
             this.unametb.Location = new System.Drawing.Point(120, 112);
-            this.unametb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.unametb.Margin = new System.Windows.Forms.Padding(2);
             this.unametb.Name = "unametb";
             this.unametb.Size = new System.Drawing.Size(131, 20);
             this.unametb.TabIndex = 4;
@@ -158,11 +158,12 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(674, 618);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Login - InvoPro";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

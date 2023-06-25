@@ -18,6 +18,7 @@ namespace invoPRO
         public InventoryInVeiw()
         {
             InitializeComponent();
+            getNewTransactionID();
         }
 
         void halfClear()
@@ -25,8 +26,15 @@ namespace invoPRO
             itemIdTxt.Text = string.Empty;
             supplierIDTxt.Text = string.Empty;
             QtyTxt.Text = string.Empty;
-            //PriceTxt.Text = string.Empty;
-            //Add discount text box to 0
+
+        }
+
+        void getNewTransactionID()
+        {
+            GetInfoEvents getInfoEvents = new GetInfoEvents();
+            transactionID = getInfoEvents.getInvertoryID();
+            transactionID++;
+            transactionIDTxt.Text = transactionID.ToString();
         }
         void itemtableload()
         {
@@ -44,6 +52,7 @@ namespace invoPRO
                 Con.closeConnectDB();
 
             }
+
             catch
             {
 
@@ -72,6 +81,7 @@ namespace invoPRO
             }
         }
 
+        
         void producttableload()
         {
 
@@ -96,6 +106,8 @@ namespace invoPRO
             }
         }
 
+        
+
         void fullclear()
         {
             Close();
@@ -110,9 +122,8 @@ namespace invoPRO
         int[] itemIDs = new int[20];
         int[] quantities = new int[20];
         int subTransaction = 1;
-        int InventoryInID;
+        int transactionID;
 
-        
         private void addItem_Click(object sender, EventArgs e)
         {
             subTransactionTxt.Text = subTransaction.ToString();
@@ -123,14 +134,17 @@ namespace invoPRO
            
             string currentDateTime = DateTime.Now.ToString();
 
-            InventoryIn inventoryIn = new InventoryIn(InventoryInID, subTransaction, itemID, supplierID, qty, currentDateTime);
+            InventoryIn inventoryIn = new InventoryIn(transactionID, subTransaction, itemID, supplierID, qty, currentDateTime);
             InventoryInEvents inventoryInEvents = new InventoryInEvents();
 
             if (inventoryInEvents.neworder(inventoryIn) == 1)
             {
-                
+                itemIDs[subTransaction] = itemID;
+                quantities[subTransaction] = qty;
+
+
                 halfClear();
-                salesDataGrid.Rows.Add(subTransaction, itemID, supplierID,qty);
+                //salesDataGrid.Rows.Add(subTransaction, itemID, supplierID,qty);
                 subTransaction++;
                 subTransactionTxt.Text = subTransaction.ToString();
             }
@@ -143,7 +157,6 @@ namespace invoPRO
 
         private void revertBtn_Click_1(object sender, EventArgs e)
         {
-            //cancel 
             string message = "You're about to cancel the current order ";
 
             var Dialog = MessageBox.Show(message, "Cancel order", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -152,20 +165,34 @@ namespace invoPRO
             {
                 InventoryInEvents inventoryInEvents = new InventoryInEvents();
 
-                if (inventoryInEvents.deleteorder(InventoryInID) == 1)
+                if (inventoryInEvents.deleteorder(transactionID) == 1)
                 {
-                    MessageBox.Show("Transaction was deleted succesfully \n Sales page has been reset", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Transaction was deleted succesfully \n Inventory page has been reset", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     fullclear();
                 }
-
-                
             }
         }
 
         private void ConfirmTransaction_Click(object sender, EventArgs e)
         {
-            //complete
+            string message = "Your inventory will be updated with the entered values, Do you wish to proceed?";
+            var Dialog = MessageBox.Show(message, "Proceed", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (Dialog == DialogResult.Yes)
+            {
+
+                for (int i = 0; i < itemIDs.Length; i++)
+                {
+                    Items items = new Items(itemIDs[i], quantities[i]);
+                    ItemEvents itemEvents = new ItemEvents();
+                    itemEvents.itemInUpdate(items);
+                }
+
+                MessageBox.Show("Transaction has been processed", "Inventory updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                fullclear();
+            }
         }
+ 
 
         private void itemIdTxt_TextChanged(object sender, EventArgs e)
         {
@@ -182,7 +209,7 @@ namespace invoPRO
         private void QtyTxt_TextChanged(object sender, EventArgs e)
         {
             //load product and quantity to the table
-            producttableload();
+            //producttableload();
         }
     }
 }
