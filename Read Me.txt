@@ -1,0 +1,1 @@
+The database files(inventoryDB.mdf and inventoryDB_log.ldf) needs to be in directory D:\documents
