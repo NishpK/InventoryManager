@@ -84,7 +84,7 @@ namespace invoPRO
             usersgv.Columns.Clear();
             DBConnection Con = new DBConnection();
             Con.connectDB();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Items WHERE name= @name", Con.connection);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Items WHERE name like % @name %", Con.connection);
             cmd.Parameters.AddWithValue("@name", pname);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -186,7 +186,7 @@ namespace invoPRO
             string pname = searchtb.Text;
             if (pname == "")
             {
-                MessageBox.Show("enter item name");
+                MessageBox.Show("Enter Item Name");
             }
             else
             {
@@ -199,5 +199,7 @@ namespace invoPRO
         {
             searchtb.Text = string.Empty;
         }
+
+       
     }
 }

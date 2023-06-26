@@ -29,7 +29,7 @@ namespace invoPRO
 
         void instructiontext()
         {
-            search.Text = "Enter supply item";
+            search.Text = "Enter Supply Item";
 
         }
 
@@ -115,7 +115,7 @@ namespace invoPRO
             if (supplierEvents.RegisterSupplier(supplier)==1)
             {
                 clearTxtBoxes();
-                MessageBox.Show("user successfully added");
+                MessageBox.Show("User Successfully Added");
             }
             
             
@@ -137,7 +137,7 @@ namespace invoPRO
             //update
             if (sid.Text == "")
             {
-                MessageBox.Show("Enter Supplier id");
+                MessageBox.Show("Enter Supplier ID");
             }
             else
             {
@@ -167,17 +167,17 @@ namespace invoPRO
 
             if (sid.Text == "")
             {
-                MessageBox.Show("Enter customer id");
+                MessageBox.Show("Enter Customer ID");
 
             }
             else if(supplierEvents.DeleteSupplier(supplier)==1)
             {
-                MessageBox.Show("supplier successfully deleted");
+                MessageBox.Show("supplier Successfully Deleted");
                 clearTxtBoxes();
             }
             else
             {
-                MessageBox.Show("error");
+                MessageBox.Show("Error");
             }
         }
 
@@ -192,7 +192,7 @@ namespace invoPRO
         {
             if (search.Text == "")
             {
-                MessageBox.Show("Enter product name");
+                MessageBox.Show("Enter Product Name");
 
             }
             else

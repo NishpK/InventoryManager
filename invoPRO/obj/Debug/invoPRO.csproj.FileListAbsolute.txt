@@ -20,9 +20,7 @@ C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\bin\Debug\invoPRO.e
 C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\bin\Debug\invoPRO.pdb
 C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.exe
 C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.pdb
-C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.Views.InventoryView.resources
 C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.AdminView.resources
-C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.CustomerView.resources
 C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.SupplierView.resources
 C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.UserView.resources
 C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.Views.WelcomeScreenView.resources
@@ -55,3 +53,8 @@ C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.inven
 C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.transactionReport.resources
 C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.ItemView.resources
 C:\Users\kavin\Documents\GitHub\InventoryManager\invoPRO\obj\Debug\invoPRO.InventoryInVeiw.resources
+C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.inventoryInreport.resources
+C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.transactionReport.resources
+C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.ItemView.resources
+C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.Views.DoTransaction.resources
+C:\Users\nisha\OneDrive\Documents\GitHub\DonationWeb\invoPRO\obj\Debug\invoPRO.InventoryInVeiw.resources

@@ -55,59 +55,53 @@
             this.salesDataGrid.AllowUserToDeleteRows = false;
             this.salesDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.salesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.salesDataGrid.Location = new System.Drawing.Point(462, 618);
-            this.salesDataGrid.Margin = new System.Windows.Forms.Padding(4);
+            this.salesDataGrid.Location = new System.Drawing.Point(346, 502);
             this.salesDataGrid.Name = "salesDataGrid";
             this.salesDataGrid.ReadOnly = true;
             this.salesDataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.salesDataGrid.RowHeadersWidth = 51;
-            this.salesDataGrid.Size = new System.Drawing.Size(1159, 241);
+            this.salesDataGrid.Size = new System.Drawing.Size(869, 196);
             this.salesDataGrid.TabIndex = 37;
             // 
             // subTransactionTxt
             // 
             this.subTransactionTxt.Enabled = false;
-            this.subTransactionTxt.Location = new System.Drawing.Point(1189, 54);
-            this.subTransactionTxt.Margin = new System.Windows.Forms.Padding(4);
+            this.subTransactionTxt.Location = new System.Drawing.Point(830, 48);
             this.subTransactionTxt.Name = "subTransactionTxt";
-            this.subTransactionTxt.Size = new System.Drawing.Size(155, 22);
+            this.subTransactionTxt.Size = new System.Drawing.Size(117, 20);
             this.subTransactionTxt.TabIndex = 31;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1122, 58);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(780, 51);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 16);
+            this.label4.Size = new System.Drawing.Size(44, 13);
             this.label4.TabIndex = 30;
             this.label4.Text = "Item No";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(624, 62);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(532, 51);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 16);
+            this.label5.Size = new System.Drawing.Size(61, 13);
             this.label5.TabIndex = 29;
-            this.label5.Text = "inventory in ID";
+            this.label5.Text = "Restock ID";
             // 
             // transactionIDTxt
             // 
             this.transactionIDTxt.Enabled = false;
-            this.transactionIDTxt.Location = new System.Drawing.Point(735, 58);
-            this.transactionIDTxt.Margin = new System.Windows.Forms.Padding(4);
+            this.transactionIDTxt.Location = new System.Drawing.Point(599, 48);
             this.transactionIDTxt.Name = "transactionIDTxt";
-            this.transactionIDTxt.Size = new System.Drawing.Size(155, 22);
+            this.transactionIDTxt.Size = new System.Drawing.Size(117, 20);
             this.transactionIDTxt.TabIndex = 28;
             // 
             // QtyTxt
             // 
-            this.QtyTxt.Location = new System.Drawing.Point(68, 384);
-            this.QtyTxt.Margin = new System.Windows.Forms.Padding(4);
+            this.QtyTxt.Location = new System.Drawing.Point(51, 312);
             this.QtyTxt.Name = "QtyTxt";
-            this.QtyTxt.Size = new System.Drawing.Size(327, 22);
+            this.QtyTxt.Size = new System.Drawing.Size(246, 20);
             this.QtyTxt.TabIndex = 25;
             this.QtyTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.QtyTxt.MouseClick += new System.Windows.Forms.MouseEventHandler(this.QtyTxt_MouseClick);
@@ -116,29 +110,26 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(68, 364);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(51, 296);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 16);
+            this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 24;
             this.label2.Text = "Quantity";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(68, 301);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(51, 245);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 16);
+            this.label1.Size = new System.Drawing.Size(59, 13);
             this.label1.TabIndex = 23;
             this.label1.Text = "Supplier ID";
             // 
             // supplierIDTxt
             // 
-            this.supplierIDTxt.Location = new System.Drawing.Point(68, 325);
-            this.supplierIDTxt.Margin = new System.Windows.Forms.Padding(4);
+            this.supplierIDTxt.Location = new System.Drawing.Point(51, 264);
             this.supplierIDTxt.Name = "supplierIDTxt";
-            this.supplierIDTxt.Size = new System.Drawing.Size(327, 22);
+            this.supplierIDTxt.Size = new System.Drawing.Size(246, 20);
             this.supplierIDTxt.TabIndex = 22;
             this.supplierIDTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.supplierIDTxt.MouseClick += new System.Windows.Forms.MouseEventHandler(this.supplierIDTxt_MouseClick);
@@ -146,10 +137,9 @@
             // 
             // revertBtn
             // 
-            this.revertBtn.Location = new System.Drawing.Point(239, 449);
-            this.revertBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.revertBtn.Location = new System.Drawing.Point(179, 365);
             this.revertBtn.Name = "revertBtn";
-            this.revertBtn.Size = new System.Drawing.Size(156, 28);
+            this.revertBtn.Size = new System.Drawing.Size(117, 23);
             this.revertBtn.TabIndex = 21;
             this.revertBtn.Text = "Cancel Order";
             this.revertBtn.UseVisualStyleBackColor = true;
@@ -157,10 +147,9 @@
             // 
             // ConfirmTransaction
             // 
-            this.ConfirmTransaction.Location = new System.Drawing.Point(68, 524);
-            this.ConfirmTransaction.Margin = new System.Windows.Forms.Padding(4);
+            this.ConfirmTransaction.Location = new System.Drawing.Point(51, 426);
             this.ConfirmTransaction.Name = "ConfirmTransaction";
-            this.ConfirmTransaction.Size = new System.Drawing.Size(331, 28);
+            this.ConfirmTransaction.Size = new System.Drawing.Size(248, 23);
             this.ConfirmTransaction.TabIndex = 20;
             this.ConfirmTransaction.Text = "Complete Order";
             this.ConfirmTransaction.UseVisualStyleBackColor = true;
@@ -168,10 +157,9 @@
             // 
             // addItem
             // 
-            this.addItem.Location = new System.Drawing.Point(64, 449);
-            this.addItem.Margin = new System.Windows.Forms.Padding(4);
+            this.addItem.Location = new System.Drawing.Point(48, 365);
             this.addItem.Name = "addItem";
-            this.addItem.Size = new System.Drawing.Size(156, 28);
+            this.addItem.Size = new System.Drawing.Size(117, 23);
             this.addItem.TabIndex = 19;
             this.addItem.Text = "Add Item";
             this.addItem.UseVisualStyleBackColor = true;
@@ -180,20 +168,18 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(72, 151);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(54, 123);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 16);
+            this.label8.Size = new System.Drawing.Size(41, 13);
             this.label8.TabIndex = 39;
             this.label8.Text = "Item ID";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // itemidTxt
             // 
-            this.itemidTxt.Location = new System.Drawing.Point(72, 175);
-            this.itemidTxt.Margin = new System.Windows.Forms.Padding(4);
+            this.itemidTxt.Location = new System.Drawing.Point(54, 142);
             this.itemidTxt.Name = "itemidTxt";
-            this.itemidTxt.Size = new System.Drawing.Size(327, 22);
+            this.itemidTxt.Size = new System.Drawing.Size(246, 20);
             this.itemidTxt.TabIndex = 38;
             this.itemidTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.itemidTxt.MouseClick += new System.Windows.Forms.MouseEventHandler(this.itemIdTxt_MouseClick);
@@ -204,19 +190,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(68, 224);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(51, 182);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 16);
+            this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 41;
             this.label3.Text = "Item name";
             // 
             // itemnametb
             // 
-            this.itemnametb.Location = new System.Drawing.Point(68, 248);
-            this.itemnametb.Margin = new System.Windows.Forms.Padding(4);
+            this.itemnametb.Location = new System.Drawing.Point(51, 202);
             this.itemnametb.Name = "itemnametb";
-            this.itemnametb.Size = new System.Drawing.Size(327, 22);
+            this.itemnametb.Size = new System.Drawing.Size(246, 20);
             this.itemnametb.TabIndex = 40;
             this.itemnametb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.itemnametb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.itemnametb_MouseClick);
@@ -227,20 +211,19 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(462, 121);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(346, 98);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1159, 413);
+            this.dataGridView1.Size = new System.Drawing.Size(869, 336);
             this.dataGridView1.TabIndex = 42;
             // 
             // InventoryInVeiw
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1656, 887);
+            this.ClientSize = new System.Drawing.Size(1242, 721);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.itemnametb);
@@ -259,6 +242,7 @@
             this.Controls.Add(this.ConfirmTransaction);
             this.Controls.Add(this.addItem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "InventoryInVeiw";
             this.Text = "InventoryIn";
             ((System.ComponentModel.ISupportInitialize)(this.salesDataGrid)).EndInit();
