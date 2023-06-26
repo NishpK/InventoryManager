@@ -34,7 +34,7 @@ namespace invoPRO
         }
         void instructiontext()
         {
-            searchtb.Text = "Enter user firstname";
+            searchtb.Text = "Enter Item Name";
 
         }
         public void userTypeCheck()
@@ -84,7 +84,7 @@ namespace invoPRO
             usersgv.Columns.Clear();
             DBConnection Con = new DBConnection();
             Con.connectDB();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Items WHERE name like % @name %", Con.connection);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Items WHERE name LIKE '%' + @name + '%'", Con.connection);
             cmd.Parameters.AddWithValue("@name", pname);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -165,7 +165,6 @@ namespace invoPRO
                         resetAndReload();
 
                     }
-                    
 
                 }
             }

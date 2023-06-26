@@ -222,7 +222,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(149, 57);
             this.button4.TabIndex = 5;
-            this.button4.Text = "Inventory Management";
+            this.button4.Text = "Restock Inventory";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -259,7 +259,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdminView";
-            this.Text = "a";
+            this.Text = "InvoPro";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
