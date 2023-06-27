@@ -67,7 +67,6 @@ namespace invoPRO
         private void button1_Click(object sender, EventArgs e)
         {
 
-
             string username = unametb.Text;
             string password= passwordtb.Text;
 

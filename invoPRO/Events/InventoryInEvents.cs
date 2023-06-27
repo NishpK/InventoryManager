@@ -19,7 +19,7 @@ namespace invoPRO
             try
             {
                 Con.connectDB();
-                SqlCommand cmd = new SqlCommand("INSERT INTO InventoryIn (InventoryInID, subTransactionID, ItemID, SupplierID, Qty ,DateTime) VALUES(@InventoryInID,@SubTransactionID,@ItemID,@SupplierID, @Qty ,@DateTime)", Con.connection);
+                SqlCommand cmd = new SqlCommand("INSERT INTO InventoryIn (InventoryInID, subTransactionID, Itemname, SupplierID, Qty ,DateTime) VALUES(@InventoryInID,@SubTransactionID,@ItemID,@SupplierID, @Qty ,@DateTime)", Con.connection);
                 cmd.Parameters.AddWithValue("@InventoryInID", inventoryIn.InventoryInID);
                 cmd.Parameters.AddWithValue("@subTransactionID", inventoryIn.subTrasactionID);
                 cmd.Parameters.AddWithValue("@ItemID", inventoryIn.itemID);

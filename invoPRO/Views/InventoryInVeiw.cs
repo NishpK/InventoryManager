@@ -19,6 +19,10 @@ namespace invoPRO
         {
             InitializeComponent();
             getNewTransactionID();
+            dataGridView1.Columns.Add("Index", "Index");
+            dataGridView1.Columns.Add("Name", "Item Name");
+            dataGridView1.Columns.Add("Quanitity", "Quanitity");
+            dataGridView1.Columns.Add("SupplierID", "Supplier ID");
         }
 
         void halfClear()
@@ -190,7 +194,7 @@ namespace invoPRO
 
 
                 halfClear();
-                //salesDataGrid.Rows.Add(subTransaction, itemID, supplierID,qty);
+                dataGridView1.Rows.Add(subTransaction, itemID, supplierID,qty);
                 subTransaction++;
                 subTransactionTxt.Text = subTransaction.ToString();
             }
